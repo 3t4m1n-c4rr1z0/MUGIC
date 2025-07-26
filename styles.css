@@ -29,7 +29,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.2rem 2rem 0.5rem 2rem;
+  padding: 0.7rem 2rem 0.3rem 2rem;
 }
 
 .logo-block {
@@ -46,8 +46,8 @@ body {
 
 .logo-text {
   font-family: 'Heavy Heap', cursive, sans-serif;
-  font-size: 2.2rem;
-  background: linear-gradient(270deg, #ffb6ea, #b5fff8, #ffe6fa, #d0e6ff, #baffc9, #ffb6ea);
+  font-size: 1.5rem;
+  background: linear-gradient(270deg, #7c4dff, #00bfff, #ff6b81, #44bd32, #7c4dff);
   background-size: 1200% 1200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -56,18 +56,20 @@ body {
   animation: rainbow 8s ease-in-out infinite;
   font-weight: bold;
   letter-spacing: 2px;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.05rem;
 }
 
 .logo-subtitle {
   font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1.1rem;
-  background: linear-gradient(90deg, #b5fff8, #ffe6fa, #d0e6ff, #baffc9);
+  font-size: 0.95rem;
+  background: linear-gradient(90deg, #7c4dff, #00bfff, #ff6b81, #44bd32);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 @keyframes rainbow {
@@ -113,7 +115,7 @@ body {
 
 .hero-title {
   font-family: 'Heavy Heap', cursive, sans-serif;
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin: 0;
   background: linear-gradient(270deg, #ff005a, #ffea00, #00ff85, #00cfff, #a259ff, #ff005a);
   background-size: 1200% 1200%;
@@ -129,9 +131,9 @@ body {
 
 .hero-subtitle {
   font-family: 'Heavy Heap', cursive, sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 1.2rem 0 0.5rem 0;
-  background: linear-gradient(90deg, #b5fff8, #ffe6fa, #d0e6ff, #baffc9);
+  background: linear-gradient(90deg, #7c4dff, #00bfff, #ff6b81, #44bd32);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -350,19 +352,48 @@ body {
   transform: scale(1.05);
 }
 
+/* MUSICA FRONTERAS */
+.musica-fronteras {
+  background: linear-gradient(135deg, #f3e8ff 60%, #ffe6fa 100%);
+  border-radius: 1.5rem;
+  max-width: 1100px;
+  margin: 2.5rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 12px #e1bee7;
+}
+
+.fronteras-title {
+  font-family: 'Heavy Heap', cursive, sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #44bd32, #00bfff, #ff6b81, #7c4dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.fronteras-desc {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 /* Responsive */
 @media (max-width: 700px) {
   .logo-text {
-    font-size: 1.3rem;
-  }
-  .titulo {
-    font-size: 2.2rem;
-  }
-  .subtitulo {
     font-size: 1.1rem;
   }
-  .tarjetas-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+  .logo-subtitle {
+    font-size: 0.8rem;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
   }
 }
