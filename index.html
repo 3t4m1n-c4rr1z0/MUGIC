@@ -8,13 +8,17 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
     <!-- Tu CSS principal -->
     <link rel="stylesheet" href="../src/css/styles.css">
+    <!-- Tailwind para utilidades extra (opcional) -->
     <script src="https://cdn.tailwindcss.com"></script>
-  
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo-section">
+                <span class="logo-emoji">✨</span>
+                <span class="logo-text">MUGIC!</span>
+            </div>
+            <ul class="nav-links">
                 <li><a href="../alumno/index.html">Alumnx</a></li>
                 <li><a href="../artistas/index.html">Artistas</a></li>
                 <li><a href="../contacto/index.html">Contacto</a></li>
@@ -25,17 +29,19 @@
                 <li><a href="../laboratorio/index.html">Laboratorio</a></li>
             </ul>
         </nav>
-        <h1 class="titulo">MUGIC! <span>✨</span></h1>
-        <h2 class="subtitulo">La música nos encanta <span>🪄</span></h2>
+        <section class="hero">
+            <h1 class="titulo">MUGIC! <span class="sparkle-icon">✨</span></h1>
+            <h2 class="subtitulo">La música nos encanta <span>🪄</span></h2>
+        </section>
     </header>
     <main>
-        <section class="tarjetas">
-            <a class="tarjeta" href="../genealogia/index.html">Genealogía</a>
-            <a class="tarjeta" href="../cronicas/index.html">Crónicas</a>
-            <a class="tarjeta" href="../laboratorio/index.html">Laboratorio</a>
-            <a class="tarjeta" href="../galeria/index.html">Galería</a>
-            <a class="tarjeta" href="../historia/index.html">Historia</a>
-            <a class="tarjeta" href="../artistas/index.html">Artistas</a>
+        <section class="tarjetas-grid">
+            <a class="tarjeta tarjeta-genealogia" href="../genealogia/index.html">🌳 Genealogía</a>
+            <a class="tarjeta tarjeta-cronicas" href="../cronicas/index.html">📖 Crónicas</a>
+            <a class="tarjeta tarjeta-laboratorio" href="../laboratorio/index.html">🧪 Laboratorio</a>
+            <a class="tarjeta tarjeta-galeria" href="../galeria/index.html">🖼️ Galería</a>
+            <a class="tarjeta tarjeta-historia" href="../historia/index.html">⏳ Historia</a>
+            <a class="tarjeta tarjeta-artistas" href="../artistas/index.html">🎤 Artistas</a>
         </section>
         <section class="concepto">
             <h3>Música sin fronteras</h3>

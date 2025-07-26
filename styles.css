@@ -1,72 +1,59 @@
 /* Heavy Heap: asegurate de tener el archivo en ../fonts/HeavyHeap.woff2 */
 @font-face {
   font-family: 'Heavy Heap';
-  src: url('../../fonts/HeavyHeap.woff2') format('woff2');
+  src: url('../fonts/HeavyHeap.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
   background: linear-gradient(135deg, #ffe6fa 0%, #d0e6ff 100%);
   color: #444;
   font-family: 'Raleway', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  text-align: center;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 
-nav {
+/* NAVBAR */
+.navbar {
   background: #e1c8ff;
-  padding: 1.2rem 0;
-  margin-bottom: 0;
-  box-shadow: 0 2px 8px #e1bee7;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px #e1bee7;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  transition: color 0.2s, background 0.2s;
-  padding: 0.5rem 1.2rem;
-  border-radius: 1rem;
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }
 
-nav a:hover {
-  color: #e1c8ff;
-  background: #fff;
+.logo-emoji {
+  font-size: 2.2rem;
+  animation: float 2.5s ease-in-out infinite;
 }
 
-/* Título principal: gradiente animado */
-.titulo {
+.logo-text {
   font-family: 'Heavy Heap', cursive, sans-serif;
-  font-size: 4rem;
-  margin: 2rem 0 0.5rem 0;
-  background: linear-gradient(270deg, #ff005a, #ffea00, #00ff85, #00cfff, #a259ff, #ff005a);
+  font-size: 2.2rem;
+  background: linear-gradient(270deg, #ffb6ea, #b5fff8, #ffe6fa, #d0e6ff, #baffc9, #ffb6ea);
   background-size: 1200% 1200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
   animation: rainbow 8s ease-in-out infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 @keyframes rainbow {
@@ -75,12 +62,63 @@ nav a:hover {
   100% {background-position:0% 50%}
 }
 
-/* Subtítulo y títulos secundarios: gradiente fijo */
-.subtitulo,
-.titulo-secundario {
+@keyframes float {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-8px);}
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: color 0.2s, background 0.2s;
+  padding: 0.5rem 1.2rem;
+  border-radius: 1rem;
+  background: transparent;
+}
+
+.nav-links a:hover {
+  color: #e1c8ff;
+  background: #fff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.titulo {
+  font-family: 'Heavy Heap', cursive, sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  background: linear-gradient(270deg, #ff005a, #ffea00, #00ff85, #00cfff, #a259ff, #ff005a);
+  background-size: 1200% 1200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 8s ease-in-out infinite;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subtitulo {
   font-family: 'Heavy Heap', cursive, sans-serif;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin: 1rem 0 0 0;
   background: linear-gradient(90deg, #b5fff8, #ffe6fa, #d0e6ff, #baffc9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -92,32 +130,92 @@ nav a:hover {
   gap: 0.5rem;
 }
 
+/* TARJETAS GRID */
+.tarjetas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #e1bee7;
+  padding: 2.2rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+  filter: brightness(1);
+  border: 2px solid #fff0;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 24px #c7a4f7;
+  filter: brightness(1.08);
+  border: 2px solid #fff;
+}
+
+/* Colores pastel para cada tarjeta */
+.tarjeta-genealogia { background: linear-gradient(135deg, #ffe6fa 60%, #b5fff8 100%);}
+.tarjeta-cronicas   { background: linear-gradient(135deg, #d0e6ff 60%, #ffb6ea 100%);}
+.tarjeta-laboratorio{ background: linear-gradient(135deg, #baffc9 60%, #ffe6fa 100%);}
+.tarjeta-galeria    { background: linear-gradient(135deg, #ffb6ea 60%, #d0e6ff 100%);}
+.tarjeta-historia   { background: linear-gradient(135deg, #b5fff8 60%, #baffc9 100%);}
+.tarjeta-artistas   { background: linear-gradient(135deg, #ffe6fa 60%, #feca57 100%);}
+
+/* Concepto */
+.concepto {
+  margin: 3rem auto 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1.2rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px #e1bee7;
+}
+
+.concepto h3 {
+  color: #a259ff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+/* Footer */
 footer {
   background: #e1c8ff;
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 3rem;
+  margin-top: auto;
   font-size: 1rem;
   letter-spacing: 1px;
+  box-shadow: 0 -2px 8px #e1bee7;
 }
 
 /* Responsive */
 @media (max-width: 700px) {
+  .logo-text {
+    font-size: 1.3rem;
+  }
   .titulo {
     font-size: 2.2rem;
   }
-  .subtitulo,
-  .titulo-secundario {
-    font-size: 1.2rem;
+  .subtitulo {
+    font-size: 1.1rem;
   }
-  .tarjetas {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  nav ul {
-    gap: 1rem;
-    flex-wrap: wrap;
+  .tarjetas-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 }
