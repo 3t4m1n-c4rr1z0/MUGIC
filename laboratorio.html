@@ -35,12 +35,92 @@
 </header>
 
   <section class="laboratorio-section">
-    <h2 class="laboratorio-title">🧪 Alquimia Musical</h2>
-    <p class="laboratorio-subtitle">Fusiona géneros y descubre nuevas combinaciones musicales</p>
-    
-    <!-- Aquí irá el juego interactivo -->
-    <div class="laboratorio-game">
-      <!-- Contenido del juego -->
+    <div class="container">
+      <h2 class="laboratorio-title text-center">🧪 Laboratorio de Fusión Musical</h2>
+      <p class="laboratorio-subtitle text-center">Combina géneros musicales y descubre nuevas fusiones</p>
+      
+      <!-- Panel de puntuación -->
+      <div class="score-panel">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="stat-box">
+              <span class="stat-number" id="score">0</span>
+              <span class="stat-label">Puntos</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-box">
+              <span class="stat-number" id="discoveries">0</span>
+              <span class="stat-label">Descubrimientos</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-box">
+              <span class="stat-number" id="combinations">0</span>
+              <span class="stat-label">Combinaciones</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Área de juego -->
+      <div class="game-area">
+        <div class="row">
+          <!-- Biblioteca de géneros -->
+          <div class="col-md-4">
+            <h4 class="section-title">🎵 Biblioteca de Géneros</h4>
+            <div class="genres-library" id="genres-library">
+              <!-- Se llenarán con JavaScript -->
+            </div>
+          </div>
+          
+          <!-- Caldero de fusión -->
+          <div class="col-md-4">
+            <h4 class="section-title">🔥 Caldero Mágico</h4>
+            <div class="fusion-cauldron" id="fusion-cauldron">
+              <div class="cauldron-content">
+                <div class="cauldron-emoji">🧪</div>
+                <p>Arrastra 2 géneros aquí</p>
+                <div class="selected-genres" id="selected-genres"></div>
+              </div>
+              <button class="fusion-btn" id="fusion-btn" disabled>✨ Crear Fusión</button>
+            </div>
+          </div>
+          
+          <!-- Panel de resultados -->
+          <div class="col-md-4">
+            <h4 class="section-title">🎭 Resultado</h4>
+            <div class="result-panel" id="result-panel">
+              <div class="result-placeholder">
+                <div class="result-emoji">🎪</div>
+                <p>Los resultados aparecerán aquí</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel de descubrimientos -->
+      <div class="discoveries-panel">
+        <h4 class="section-title">🏆 Tus Descubrimientos</h4>
+        <div class="discoveries-grid" id="discoveries-grid">
+          <div class="discovery-placeholder">
+            <p>¡Empieza a combinar géneros para hacer descubrimientos!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instrucciones -->
+      <div class="instructions-panel">
+        <h5>📜 Cómo jugar:</h5>
+        <ul>
+          <li>🎯 Arrastra géneros musicales al caldero mágico</li>
+          <li>🔥 Combina exactamente 2 géneros diferentes</li>
+          <li>✨ Presiona "Crear Fusión" para descubrir el resultado</li>
+          <li>🏆 Colecciona todos los descubrimientos posibles</li>
+          <li>🎪 Algunas combinaciones son históricamente reales</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -75,5 +155,4 @@
   <script src="../js/laboratorio.js"></script>
 </body>
 </html>
-</body>
 </html>
