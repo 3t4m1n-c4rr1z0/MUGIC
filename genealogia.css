@@ -1,10 +1,3 @@
-.genealogia-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
 .genealogia-section {
   background: linear-gradient(135deg, #e0ffe6 60%, #f3e8ff 100%);
   border-radius: 1.5rem;
@@ -28,35 +21,6 @@
   display: inline-block;
 }
 
-.genealogia-paragraph {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.genealogia-image {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-}
-
-
-.genealogia-list {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-
-.genealogia-link {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.genealogia-link:hover {
-    text-decoration: underline;
-}
-
 .genealogia-desc {
   font-family: 'Raleway', Arial, sans-serif;
   font-size: 1.2rem;
@@ -64,115 +28,12 @@
   margin-bottom: 2rem;
 }
 
-.genealogia-arbol {
-  margin: 2rem 0;
-}
-
-.genealogia-img {
+.arbol-img {
+  display: block;
   max-width: 100%;
+  margin: 2rem auto;
   border-radius: 1rem;
   box-shadow: 0 2px 12px #a1c4fd44;
-}
-
-.genealogia-btn {
-  display: inline-block;
-  background: linear-gradient(90deg, #44bd32, #baffc9);
-  color: #fff;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 2rem;
-  padding: 0.9rem 2.2rem;
-  text-decoration: none;
-  box-shadow: 0 2px 8px #baffc9;
-  transition: background 0.2s, transform 0.2s;
-}
-
-/* Arbol Genealogico Styles */
-.arbol-genealogico {
-  margin: 2.5rem auto 3rem auto;
-  text-align: left;
-  max-width: 700px;
-}
-
-.arbol-lista,
-.arbol-lista ul {
-  list-style-type: none;
-  padding-left: 1.5em;
-  position: relative;
-}
-
-.arbol-lista > li {
-  font-size: 1.2rem;
-  margin-bottom: 1.2em;
-}
-
-.arbol-lista li::before {
-  content: "│";
-  position: absolute;
-  left: 0.3em;
-  color: #baffc9;
-  font-size: 1.2em;
-  top: 0;
-  bottom: 0;
-}
-
-.arbol-lista > li::before {
-  content: "";
-}
-
-.arbol-lista strong {
-  color: #44bd32;
-  font-weight: bold;
-  font-size: 1.18em;
-  letter-spacing: 1px;
-}
-
-.arbol-genealogico-cajas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2.5rem auto 3rem auto;
-  gap: 0.7rem;
-}
-
-.arbol-nivel {
-  display: flex;
-  gap: 2.2rem;
-  justify-content: center;
-}
-
-.arbol-caja {
-  background: linear-gradient(90deg, #baffc9 60%, #a1c4fd 100%);
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 12px #baffc9;
-  padding: 1.1rem 2.2rem;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1.15rem;
-  font-weight: bold;
-  color: #444;
-  text-align: center;
-  position: relative;
-  min-width: 120px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.arbol-caja.raiz {
-  background: linear-gradient(90deg, #44bd32 60%, #baffc9 100%);
-  color: #fff;
-}
-
-.arbol-caja:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 24px #a1c4fd;
-}
-
-.arbol-flecha {
-  font-size: 2.2rem;
-  color: #a1c4fd;
-  text-align: center;
-  margin: 0.2rem 0;
 }
 
 /* Semillas */
@@ -232,152 +93,9 @@
   margin-top: 0.5rem;
 }
 
-.semilla-emoji {
-  font-size: 2.2rem;
-  margin-bottom: 0.7rem;
-}
-
 .semilla-titulo {
   font-weight: bold;
   font-size: 1.15rem;
   margin-bottom: 0.4rem;
   color: #44bd32;
-}
-
-.semilla-desc {
-  font-size: 1rem;
-  color: #555;
-}
-
-.semilla-desc.semilla-oculta span {
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-
-.semilla-card:hover .semilla-desc.semilla-oculta span {
-  opacity: 1;
-  height: auto;
-  padding-top: 0.5rem;
-  color: #44bd32;
-  background: linear-gradient(90deg, #baffc9 0%, #e0ffe6 100%);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px #baffc966;
-}
-
-/* Footer Styles */
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 2rem 1rem 1.5rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-info {
-  text-align: center;
-  font-size: 1rem;
-  color: #888;
-}
-
-.footer-info a {
-  color: #7c4dff;
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-
-.footer-info a:hover {
-  color: #44bd32;
-}
-
-.genea-mapa {
-  position: relative;
-  width: 500px;
-  height: 300px;
-  margin: 2rem auto 3rem auto;
-  background: #f8fcff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 12px #baffc9;
-}
-.genea-caja {
-  position: absolute;
-  background: linear-gradient(90deg, #baffc9 60%, #a1c4fd 100%);
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 12px #baffc9;
-  padding: 0.8rem 1.5rem;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #444;
-  text-align: center;
-  cursor: pointer;
-  z-index: 2;
-}
-.genea-svg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Caligrama Styles */
-.caligrama-arbol {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: 420px;
-  margin: 2rem auto;
-  background: none;
-  min-height: 350px;
-}
-
-.caligrama-arbol span {
-  position: absolute;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #44bd32;
-  white-space: nowrap;
-  user-select: none;
-  pointer-events: none;
-}
-
-.caligrama-arbol .raiz {
-  bottom: 0;
-  font-size: 1.05rem;
-  color: #a18cd1;
-  transform: rotate(-10deg);
-}
-
-.caligrama-arbol .tronco {
-  color: #b57f50;
-  font-size: 1.15rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.caligrama-arbol .rama {
-  color: #44bd32;
-  font-size: 1.1rem;
-}
-
-@media (max-width: 700px) {
-  .genea-mapa {
-    width: 98vw;
-    height: 600px;
-  }
-  /* Puedes agregar reglas para reubicar las cajas si lo deseas */
-  .caligrama-arbol {
-    max-width: 98vw;
-    height: 320px;
-    min-height: 220px;
-  }
-  .caligrama-arbol span {
-    font-size: 0.9rem;
-  }
 }

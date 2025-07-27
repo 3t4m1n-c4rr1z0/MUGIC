@@ -1,45 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genealogia</title>
-    <link rel="stylesheet" href="../../src/css/genealogia.css">
-    <script src="../../src/js/genealogia.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Genealogía Musical | MUGIC!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/genealogia.css">
 </head>
 <body>
-    <header>
-        <h1>Genealogia</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../alumno/index.html">Alumno</a></li>
-                <li><a href="../artistas/index.html">Artistas</a></li>
-                <li><a href="../contacto/index.html">Contacto</a></li>
-                <li><a href="../cronicas/index.html">Cronicas</a></li>
-                <li><a href="../galeria/index.html">Galeria</a></li>
-                <li><a href="../historia/index.html">Historia</a></li>
-                <li><a href="../laboratorio/index.html">Laboratorio</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Agrega esto donde quieras mostrar la sección Genealogía -->
-        <section class="genealogia-section" id="genealogia">
-          <h2 class="genealogia-title">🌳 Genealogía Musical</h2>
-          <p class="genealogia-desc">
-            Explora las raíces y conexiones entre géneros musicales de todo el mundo.<br>
-            Descubre cómo los estilos se influyen y transforman a lo largo de la historia.
-          </p>
-          <div class="genealogia-arbol">
-            <!-- Aquí puedes poner una imagen de árbol genealógico, SVG, o un gráfico interactivo -->
-            <img src="../assets/arbol-genealogico.png" alt="Árbol Genealógico Musical" class="genealogia-img">
-          </div>
-          <a href="../genealogia/index.html" class="genealogia-btn">Ver árbol completo</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 MUGIC</p>
-    </footer>
+<header class="main-header">
+  <div class="header-content">
+    <a href="index.html" class="logo-link-nav">
+      <span class="logo-row">
+        <span class="logo-emoji-nav">✨</span>
+        <span class="logo-text-nav">MUGIC!</span>
+      </span>
+      <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../genealogia/index.html">Genealogía</a></li>
+        <li><a href="../cronicas/index.html">Crónicas</a></li>
+        <li><a href="../laboratorio/index.html">Laboratorio</a></li>
+        <li><a href="../galeria/index.html">Galería</a></li>
+        <li><a href="../historia/index.html">Historia</a></li>
+        <li><a href="../artistas/index.html">Artistas</a></li>
+        <li><a href="../contacto/index.html">Contacto</a></li>
+        <li><a href="../alumno/index.html">Alumno</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <section class="genealogia-section">
+    <h2 class="genealogia-title">🌳 Genealogía Musical</h2>
+    <p class="genealogia-desc">
+      Un árbol de géneros musicales y sus raíces culturales.
+    </p>
+    <!-- Imagen del caligrama -->
+    <img src="../public/imagenes/arbol.jpg" alt="Árbol caligrama de géneros musicales" class="arbol-img">
+
+    <!-- Sub-sección Semillas -->
+    <h3 class="semillas-title">🌱 Semillas</h3>
+    <p class="semillas-desc">
+      Influencias ocultas en la historia musical.<br>
+      <span style="font-size:0.95em;color:#888;">(Hacé click o tab para descubrir el origen)</span>
+    </p>
+    <div class="semillas-grid">
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Flamenco</div>
+        <div class="semilla-origen">🌍 Origen africano</div>
+        <div class="semilla-desc">
+          Ritmos y palmas africanas presentes en el cante jondo andaluz.
+        </div>
+      </div>
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Folklore</div>
+        <div class="semilla-origen">🪶 Origen indígena</div>
+        <div class="semilla-desc">
+          Instrumentos y melodías originarias en la música popular latinoamericana.
+        </div>
+      </div>
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Jazz</div>
+        <div class="semilla-origen">🎷 Origen en la diáspora</div>
+        <div class="semilla-desc">
+          El jazz nace del encuentro entre culturas africanas y europeas en EE.UU.
+        </div>
+      </div>
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Cumbia</div>
+        <div class="semilla-origen">🥁 Fusión africana, indígena y europea</div>
+        <div class="semilla-desc">
+          La cumbia nació del encuentro entre tambores africanos, flautas indígenas y melodías españolas.
+        </div>
+      </div>
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Samba</div>
+        <div class="semilla-origen">🌍 Origen africano</div>
+        <div class="semilla-desc">
+          La samba brasileña tiene raíces en ritmos y danzas africanas traídas por esclavos.
+        </div>
+      
+   
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Tango</div>
+        <div class="semilla-origen">🎻 Fusión europea y africana</div>
+        <div class="semilla-desc">
+          El tango surge de la mezcla de inmigrantes europeos y ritmos afro-rioplatenses.
+        </div>
+     
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Bossa Nova</div>
+        <div class="semilla-origen">🎶 Fusión samba y jazz</div>
+        <div class="semilla-desc">
+          La bossa nova surge de la mezcla entre samba brasileña y armonías del jazz.
+        </div>
+      </div>
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Milonga</div>
+        <div class="semilla-origen">🪗 Raíz afro-rioplatense</div>
+        <div class="semilla-desc">
+          La milonga tiene influencias africanas y europeas, base del tango.
+        </div>
+      </div>
+      <div class="semilla-card" tabindex="0">
+        <div class="semilla-titulo">Hip Hop</div>
+        <div class="semilla-origen">🎤 Fusión afroamericana y latina</div>
+        <div class="semilla-desc">
+          El hip hop nace en barrios afroamericanos y latinos de Nueva York, mezclando funk, soul y poesía urbana.
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <footer class="main-footer">
+    <div class="footer-content">
+      <a href="index.html" class="logo-link-nav">
+        <span class="logo-row">
+          <span class="logo-emoji-nav">✨</span>
+          <span class="logo-text-nav">MUGIC!</span>
+        </span>
+        <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
+      </a>
+      <div class="footer-links">
+        <div>
+          <div class="footer-link-title">Enlaces Rápidos</div>
+          <a href="../genealogia/index.html">Árbol Genealógico</a>
+          <a href="../cronicas/index.html">Crónicas</a>
+          <a href="../laboratorio/index.html">Laboratorio Musical</a>
+        </div>
+        <div>
+          <div class="footer-link-title pink">Contacto</div>
+          <a href="../contacto/index.html" class="footer-btn">✉️ CONTÁCTANOS</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 MUGIC! | Trabajo Práctico Final - Informática General
+    </div>
+  </footer>
+
+  <script src="../src/js/genealogia.js"></script>
 </body>
 </html>
