@@ -1,38 +1,39 @@
-/* ===== LABORATORIO MUSICAL ===== */
+/* ===== LABORATORIO MUSICAL - HARMONY TREE COLORS ===== */
 
 .laboratorio-section {
   padding: 60px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, hsl(290, 30%, 94%) 0%, hsl(45, 50%, 96%) 50%, hsl(290, 25%, 95%) 100%);
   min-height: 100vh;
-  color: white;
+  color: hsl(290, 20%, 25%);
 }
 
 .laboratorio-title {
   font-family: 'Heavy Heap', cursive;
   font-size: 3.5rem;
   font-weight: bold;
-  color: #ffffff;
+  color: hsl(280, 40%, 35%);
   margin-bottom: 1rem;
   text-shadow: 
-    0 4px 8px rgba(0, 0, 0, 0.4),
-    0 8px 16px rgba(102, 126, 234, 0.3);
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px hsl(280, 30%, 85%);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
 }
 
 .laboratorio-subtitle {
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: hsl(260, 20%, 40%);
   margin-bottom: 3rem;
 }
 
 /* ===== PANEL DE PUNTUACIÓN ===== */
 .score-panel {
-  background: rgba(255, 255, 255, 0.1);
+  background: hsl(0, 0%, 100%, 0.7);
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 30px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid hsl(280, 20%, 90%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .stat-box {
@@ -45,13 +46,13 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffeb3b;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: hsl(173, 50%, 45%);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: hsl(240, 15%, 50%);
   margin-top: 5px;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .section-title {
-  color: #ffeb3b;
+  color: hsl(280, 40%, 40%);
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
@@ -70,31 +71,33 @@
 
 /* ===== BIBLIOTECA DE GÉNEROS ===== */
 .genres-library {
-  background: rgba(255, 255, 255, 0.1);
+  background: hsl(0, 0%, 100%, 0.6);
   border-radius: 15px;
   padding: 20px;
   min-height: 400px;
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border: 2px dashed hsl(280, 30%, 85%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .genre-card {
-  background: linear-gradient(45deg, #ff6b6b, #feca57);
-  color: white;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(280, 20%, 96%) 100%);
+  color: hsl(240, 15%, 25%);
   padding: 15px;
   margin: 10px 0;
   border-radius: 12px;
   cursor: grab;
   transition: all 0.3s ease;
   text-align: center;
-  font-weight: bold;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  border: 2px solid hsl(280, 20%, 90%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .genre-card:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  border-color: #ffeb3b;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-color: hsl(173, 50%, 60%);
+  background: linear-gradient(135deg, hsl(173, 30%, 95%) 0%, hsl(280, 20%, 94%) 100%);
 }
 
 .genre-card:active {
@@ -109,20 +112,21 @@
 
 /* ===== CALDERO MÁGICO ===== */
 .fusion-cauldron {
-  background: rgba(255, 255, 255, 0.15);
+  background: hsl(0, 0%, 100%, 0.8);
   border-radius: 20px;
   padding: 20px;
   min-height: 400px;
-  border: 3px dashed #ffeb3b;
+  border: 3px dashed hsl(173, 40%, 70%);
   text-align: center;
   position: relative;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .fusion-cauldron.drag-over {
-  background: rgba(255, 235, 59, 0.2);
-  border-color: #ff6b6b;
-  transform: scale(1.02);
+  background: hsl(173, 30%, 95%);
+  border-color: hsl(173, 50%, 50%);
+  transform: scale(1.01);
 }
 
 .cauldron-content {
@@ -152,21 +156,21 @@
 }
 
 .selected-genre {
-  background: linear-gradient(45deg, #5f27cd, #341f97);
-  color: white;
+  background: linear-gradient(45deg, hsl(173, 40%, 70%), hsl(173, 35%, 80%));
+  color: hsl(173, 60%, 25%);
   padding: 10px 15px;
   border-radius: 20px;
   font-weight: bold;
   position: relative;
-  border: 2px solid #ffeb3b;
+  border: 2px solid hsl(173, 30%, 60%);
 }
 
 .remove-genre {
   position: absolute;
   top: -5px;
   right: -5px;
-  background: #ff6b6b;
-  color: white;
+  background: hsl(0, 60%, 70%);
+  color: hsl(0, 0%, 98%);
   border: none;
   border-radius: 50%;
   width: 25px;
@@ -176,8 +180,8 @@
 }
 
 .fusion-btn {
-  background: linear-gradient(45deg, #ff6b6b, #ff9ff3);
-  color: white;
+  background: linear-gradient(45deg, hsl(173, 50%, 60%), hsl(173, 45%, 50%));
+  color: hsl(0, 0%, 98%);
   border: none;
   padding: 15px 30px;
   border-radius: 25px;
@@ -192,7 +196,7 @@
 
 .fusion-btn:enabled:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 8px 20px hsl(173, 50%, 60%, 0.3);
 }
 
 .fusion-btn:disabled {
@@ -202,11 +206,12 @@
 
 /* ===== PANEL DE RESULTADOS ===== */
 .result-panel {
-  background: rgba(255, 255, 255, 0.1);
+  background: hsl(0, 0%, 100%, 0.8);
   border-radius: 15px;
   padding: 20px;
   min-height: 400px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid hsl(173, 30%, 80%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .result-placeholder, .result-content {
@@ -216,6 +221,7 @@
   justify-content: center;
   text-align: center;
   height: 100%;
+  color: hsl(173, 30%, 45%);
 }
 
 .result-emoji {
@@ -224,12 +230,13 @@
 }
 
 .fusion-result {
-  background: linear-gradient(45deg, #00d2ff, #3a7bd5);
-  color: white;
+  background: linear-gradient(45deg, hsl(173, 40%, 85%), hsl(43, 50%, 90%));
+  color: hsl(173, 50%, 30%);
   padding: 20px;
   border-radius: 15px;
   text-align: center;
   animation: fadeInScale 0.6s ease-out;
+  border: 2px solid hsl(173, 30%, 70%);
 }
 
 @keyframes fadeInScale {
@@ -247,7 +254,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #ffeb3b;
+  color: hsl(45, 70%, 55%);
 }
 
 .fusion-description {
@@ -257,8 +264,8 @@
 }
 
 .fusion-points {
-  background: rgba(255, 235, 59, 0.2);
-  color: #ffeb3b;
+  background: hsl(45, 80%, 85%);
+  color: hsl(45, 70%, 45%);
   padding: 8px 15px;
   border-radius: 20px;
   font-weight: bold;
@@ -267,11 +274,13 @@
 
 /* ===== PANEL DE DESCUBRIMIENTOS ===== */
 .discoveries-panel {
-  background: rgba(255, 255, 255, 0.1);
+  background: hsl(290, 30%, 95%);
   border-radius: 20px;
   padding: 25px;
   margin: 40px 0;
   backdrop-filter: blur(10px);
+  border: 2px solid hsl(290, 25%, 85%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .discoveries-grid {
@@ -282,24 +291,25 @@
 }
 
 .discovery-card {
-  background: linear-gradient(45deg, #48cae4, #023e8a);
-  color: white;
+  background: linear-gradient(45deg, hsl(290, 40%, 80%), hsl(45, 60%, 88%));
+  color: hsl(290, 50%, 30%);
   padding: 15px;
   border-radius: 12px;
   text-align: center;
   font-size: 0.9rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid hsl(290, 30%, 70%);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .discovery-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .discovery-placeholder {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: hsl(0, 0%, 70%);
   font-style: italic;
   grid-column: 1 / -1;
   padding: 40px;
@@ -307,7 +317,7 @@
 
 /* ===== INSTRUCCIONES ===== */
 .instructions-panel {
-  background: rgba(255, 255, 255, 0.1);
+  background: hsl(240, 6%, 10%, 0.6);
   border-radius: 15px;
   padding: 20px;
   margin-top: 30px;
@@ -315,7 +325,7 @@
 }
 
 .instructions-panel h5 {
-  color: #ffeb3b;
+  color: hsl(43, 74%, 66%);
   margin-bottom: 15px;
 }
 
@@ -336,6 +346,126 @@
   left: 0;
 }
 
+/* ===== TIENDA DE GÉNEROS ===== */
+.shop-item {
+  background: hsl(12, 76%, 61%, 0.1);
+  border: 2px solid hsl(12, 76%, 61%, 0.3);
+  border-radius: 10px;
+  padding: 12px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.shop-item:hover {
+  background: hsl(12, 76%, 61%, 0.2);
+  border-color: hsl(12, 76%, 61%, 0.5);
+}
+
+.shop-genre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shop-emoji {
+  font-size: 1.2rem;
+}
+
+.shop-name {
+  font-weight: bold;
+  color: hsl(0, 0%, 98%);
+  font-size: 0.9rem;
+}
+
+.shop-cost {
+  color: hsl(43, 74%, 66%);
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.shop-btn {
+  background: linear-gradient(45deg, hsl(12, 76%, 61%), hsl(43, 74%, 66%));
+  color: hsl(0, 0%, 98%);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.shop-btn:enabled:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px hsl(12, 76%, 61%, 0.4);
+}
+
+.shop-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: hsl(0, 0%, 40%);
+}
+
+/* ===== FUSIÓN FALLIDA ===== */
+.fusion-result.failed {
+  background: linear-gradient(45deg, hsl(0, 84%, 60%), hsl(0, 62%, 31%));
+  border: 2px solid hsl(0, 84%, 60%);
+}
+
+.fusion-result.failed .result-emoji {
+  font-size: 2.5rem;
+}
+
+/* ===== CRÉDITOS EN TIEMPO REAL ===== */
+.stat-box .stat-number {
+  position: relative;
+}
+
+.stat-box .stat-number::after {
+  content: ' 💰';
+  font-size: 0.6em;
+  opacity: 0.7;
+}
+
+/* ===== NOTIFICACIONES ===== */
+.notification {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsl(240, 4%, 16%);
+}
+
+/* ===== RAÍCES MUSICALES (ESPECIALES) ===== */
+.genre-card[data-genre-id="spiritual"] {
+  background: linear-gradient(45deg, hsl(280, 65%, 60%), hsl(340, 75%, 55%));
+}
+
+.genre-card[data-genre-id="indigenous"] {
+  background: linear-gradient(45deg, hsl(30, 80%, 55%), hsl(27, 87%, 67%));
+}
+
+.genre-card[data-genre-id="classical"] {
+  background: linear-gradient(45deg, hsl(220, 70%, 50%), hsl(240, 6%, 10%));
+}
+
+.genre-card[data-genre-id="african"] {
+  background: linear-gradient(45deg, hsl(12, 76%, 61%), hsl(173, 58%, 39%));
+}
+
+/* ===== ANIMACIÓN DE CRÉDITOS ===== */
+@keyframes creditGain {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); color: hsl(43, 74%, 66%); }
+  100% { transform: scale(1); }
+}
+
+.stat-number.credit-gain {
+  animation: creditGain 0.5s ease-out;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .laboratorio-title {
@@ -352,5 +482,15 @@
   
   .stat-number {
     font-size: 1.8rem;
+  }
+  
+  .shop-item {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .shop-btn {
+    min-width: 100%;
   }
 }
