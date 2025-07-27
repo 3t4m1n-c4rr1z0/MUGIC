@@ -187,3 +187,21 @@
   font-size: 1rem;
   color: #555;
 }
+
+.semilla-desc.semilla-oculta span {
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.semilla-card:hover .semilla-desc.semilla-oculta span {
+  opacity: 1;
+  height: auto;
+  padding-top: 0.5rem;
+  color: #44bd32;
+  background: linear-gradient(90deg, #baffc9 0%, #e0ffe6 100%);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px #baffc966;
+}

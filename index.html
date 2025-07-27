@@ -1,108 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Genealogía Musical | MUGIC!</title>
-  <link rel="stylesheet" href="../src/css/styles.css">
-  <link rel="stylesheet" href="../src/css/genealogia.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogia</title>
+    <link rel="stylesheet" href="../../src/css/genealogia.css">
+    <script src="../../src/js/genealogia.js" defer></script>
 </head>
 <body>
-  <!-- HEADER/NAV -->
-  <header class="main-header">
-    <div class="header-content">
-      <a href="../index.html" class="logo-link-nav">
-        <span class="logo-row">
-          <span class="logo-emoji-nav">✨</span>
-          <span class="logo-text-nav">MUGIC!</span>
-        </span>
-        <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
-      </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="../genealogia/index.html">Genealogía</a></li>
-          <li><a href="../cronicas/index.html">Crónicas</a></li>
-          <li><a href="../laboratorio/index.html">Laboratorio</a></li>
-          <li><a href="../galeria/index.html">Galería</a></li>
-          <li><a href="../historia/index.html">Historia</a></li>
-          <li><a href="../artistas/index.html">Artistas</a></li>
-          <li><a href="../contacto/index.html">Contacto</a></li>
-          <li><a href="../alumno/index.html">Alumno</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- SECCIÓN GENEALOGÍA -->
-  <section class="genealogia-section">
-    <h2 class="genealogia-title">🌳 Genealogía Musical</h2>
-    <p class="genealogia-desc">
-      Volviendo a las raíces: explora cómo los géneros musicales se ramifican y se conectan a través del tiempo.
-    </p>
-    <div class="arbol-genealogico">
-      <ul class="arbol-lista">
-        <li>
-          <strong>Blues</strong>
-          <ul>
-            <li>
-              <strong>Rock & Roll</strong>
-              <ul>
-                <li>Rock</li>
-                <li>Pop</li>
-              </ul>
-            </li>
-            <li>Jazz</li>
-            <li>R&B</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Folklore</strong>
-          <ul>
-            <li>Tango</li>
-            <li>Chacarera</li>
-            <li>Zamba</li>
-          </ul>
-        </li>
-        <!-- Agrega más ramas según tu investigación -->
-      </ul>
-    </div>
-
-    <!-- SUBSECCIÓN SEMILLAS -->
-    <h3 class="semillas-title">🌱 Semillas</h3>
-    <p class="semillas-desc">
-      Influencias ocultas o no oficiales que nutrieron la historia musical.
-    </p>
-    <div class="semillas-grid">
-      <div class="semilla-card">
-        <div class="semilla-emoji">🌍</div>
-        <div class="semilla-titulo">África en el Flamenco</div>
-        <div class="semilla-desc">Ritmos y palmas africanas presentes en el cante jondo andaluz.</div>
-      </div>
-      <div class="semilla-card">
-        <div class="semilla-emoji">🪶</div>
-        <div class="semilla-titulo">Indígenas en el Folklore</div>
-        <div class="semilla-desc">Instrumentos y melodías originarias en la música popular latinoamericana.</div>
-      </div>
-      <div class="semilla-card">
-        <div class="semilla-emoji">🎺</div>
-        <div class="semilla-titulo">Jazz y la diáspora</div>
-        <div class="semilla-desc">El jazz nace del encuentro entre culturas africanas y europeas en EE.UU.</div>
-      </div>
-      <!-- Agrega más fichas si lo deseas -->
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="main-footer">
-    <div class="footer-content">
-      <a href="../index.html" class="logo-link-nav">
-        <span class="logo-row">
-          <span class="logo-emoji-nav">✨</span>
-          <span class="logo-text-nav">MUGIC!</span>
-        </span>
-        <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
-      </a>
-      <p class="footer-copy">© 2025 MUGIC! Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <header>
+        <h1>Genealogia</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../alumno/index.html">Alumno</a></li>
+                <li><a href="../artistas/index.html">Artistas</a></li>
+                <li><a href="../contacto/index.html">Contacto</a></li>
+                <li><a href="../cronicas/index.html">Cronicas</a></li>
+                <li><a href="../galeria/index.html">Galeria</a></li>
+                <li><a href="../historia/index.html">Historia</a></li>
+                <li><a href="../laboratorio/index.html">Laboratorio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Agrega esto donde quieras mostrar la sección Genealogía -->
+        <section class="genealogia-section" id="genealogia">
+          <h2 class="genealogia-title">🌳 Genealogía Musical</h2>
+          <p class="genealogia-desc">
+            Explora las raíces y conexiones entre géneros musicales de todo el mundo.<br>
+            Descubre cómo los estilos se influyen y transforman a lo largo de la historia.
+          </p>
+          <div class="genealogia-arbol">
+            <!-- Aquí puedes poner una imagen de árbol genealógico, SVG, o un gráfico interactivo -->
+            <img src="../assets/arbol-genealogico.png" alt="Árbol Genealógico Musical" class="genealogia-img">
+          </div>
+          <a href="../genealogia/index.html" class="genealogia-btn">Ver árbol completo</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MUGIC</p>
+    </footer>
 </body>
 </html>
