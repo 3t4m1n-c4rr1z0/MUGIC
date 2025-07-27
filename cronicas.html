@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crónicas Musicales | MUGIC!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/cronicas.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="header-content">
+    <a href="../index.html" class="logo-link-nav">
+      <span class="logo-row">
+        <span class="logo-emoji-nav">✨</span>
+        <span class="logo-text-nav">MUGIC!</span>
+      </span>
+      <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="genealogia.html">Genealogía</a></li>
+        <li><a href="cronicas.html">Crónicas</a></li>
+        <li><a href="laboratorio.html">Laboratorio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="alumnx.html">Alumno</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <section class="cronicas-section">
+    <div class="container">
+      <h2 class="cronicas-title text-center mb-4">📖 Crónicas Musicales</h2>
+      <p class="cronicas-subtitle text-center mb-5">Relatos sobre el surgimiento de géneros, desde una mirada política y social</p>
+      
+      <!-- Navegación de subsecciones -->
+      <div class="cronicas-nav mb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="nav nav-pills justify-content-center" id="cronicas-tabs" role="tablist">
+              <button class="nav-link active" id="principales-tab" data-bs-toggle="pill" data-bs-target="#principales" type="button" role="tab">
+                📖 Crónicas Principales
+              </button>
+              <button class="nav-link" id="escenas-tab" data-bs-toggle="pill" data-bs-target="#escenas" type="button" role="tab">
+                🏴 Escenas en Fuga
+              </button>
+              <button class="nav-link" id="bisagras-tab" data-bs-toggle="pill" data-bs-target="#bisagras" type="button" role="tab">
+                ⚡ Bisagras
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido de las pestañas -->
+      <div class="tab-content" id="cronicas-content">
+        
+        <!-- TAB 1: CRÓNICAS PRINCIPALES -->
+        <div class="tab-pane fade show active" id="principales" role="tabpanel">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 cronicas-card">
+                <div class="card-body">
+                  <div class="cronicas-emoji">🎷</div>
+                  <h5 class="card-title">El Jazz y la Resistencia</h5>
+                  <p class="card-text">
+                    En Nueva Orleans, a principios del siglo XX, la música jazz nació como una expresión de libertad en una sociedad segregada. Los músicos afroamericanos crearon un lenguaje musical nuevo, donde la improvisación se convirtió en metáfora de resistencia.
+                  </p>
+                  <small class="text-muted">📍 Nueva Orleans, 1900-1920</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 cronicas-card">
+                <div class="card-body">
+                  <div class="cronicas-emoji">🎵</div>
+                  <h5 class="card-title">Tango: El Dolor del Arrabal</h5>
+                  <p class="card-text">
+                    En los barrios porteños de Buenos Aires, inmigrantes europeos y criollos forjaron el tango. Nacido en los márgenes, el tango cantaba las penas del desarraigo y la nostalgia de quienes buscaban una nueva vida.
+                  </p>
+                  <small class="text-muted">📍 Buenos Aires, 1880-1910</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 cronicas-card">
+                <div class="card-body">
+                  <div class="cronicas-emoji">🪘</div>
+                  <h5 class="card-title">Reggae: Mensaje desde Jamaica</h5>
+                  <p class="card-text">
+                    En Kingston, Jamaica, el reggae surgió como la voz de los oprimidos. Bob Marley y otros pioneros usaron el ritmo para difundir mensajes de liberación, espiritualidad rastafari y justicia social por todo el mundo.
+                  </p>
+                  <small class="text-muted">📍 Kingston, 1960-1970</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 cronicas-card">
+                <div class="card-body">
+                  <div class="cronicas-emoji">🎸</div>
+                  <h5 class="card-title">Rock Nacional Argentino</h5>
+                  <p class="card-text">
+                    Durante la dictadura militar argentina, el rock nacional se convirtió en refugio y resistencia. Bandas como Sui Generis y Serú Girán cantaron en código, creando himnos generacionales que trascendieron la represión.
+                  </p>
+                  <small class="text-muted">📍 Argentina, 1970-1980</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: ESCENAS EN FUGA -->
+        <div class="tab-pane fade" id="escenas" role="tabpanel">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 escenas-card">
+                <div class="card-body">
+                  <div class="escenas-emoji">🏴‍☠️</div>
+                  <h5 class="card-title">Punk: No Future</h5>
+                  <p class="card-text">
+                    Londres, 1976. La juventud sin futuro abraza el punk como grito desesperado. Sex Pistols, The Clash y otros convergen en una estética de la destrucción que rechaza todo lo establecido.
+                  </p>
+                  <div class="escenas-tags">
+                    <span class="badge bg-dark">Resistencia</span>
+                    <span class="badge bg-danger">Anarquía</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 escenas-card">
+                <div class="card-body">
+                  <div class="escenas-emoji">🎤</div>
+                  <h5 class="card-title">Hip Hop: Desde el Bronx</h5>
+                  <p class="card-text">
+                    En el South Bronx devastado de los 70, jóvenes afroamericanos y latinos inventan el hip hop. DJ Kool Herc, Grandmaster Flash y Afrika Bambaataa crean una cultura completa: rap, breakdance, graffiti.
+                  </p>
+                  <div class="escenas-tags">
+                    <span class="badge bg-warning">Creatividad</span>
+                    <span class="badge bg-info">Comunidad</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 escenas-card">
+                <div class="card-body">
+                  <div class="escenas-emoji">🎺</div>
+                  <h5 class="card-title">Cumbia Villera</h5>
+                  <p class="card-text">
+                    En las villas de Buenos Aires, la cumbia villera narra sin filtro la realidad de la marginalidad. Damas Gratis, Flor de Piedra y otros cantan sobre drogas, cárcel y supervivencia.
+                  </p>
+                  <div class="escenas-tags">
+                    <span class="badge bg-success">Testimonio</span>
+                    <span class="badge bg-secondary">Marginalidad</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: BISAGRAS -->
+        <div class="tab-pane fade" id="bisagras" role="tabpanel">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker">🎪</div>
+              <div class="timeline-content">
+                <h5>Woodstock 1969</h5>
+                <p>Tres días que cambiaron la música para siempre. 400,000 jóvenes se reunieron en una granja para celebrar "paz, amor y música", convirtiendo un festival en símbolo de toda una generación.</p>
+                <small class="text-muted">📅 15-18 Agosto, 1969</small>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-marker">🌴</div>
+              <div class="timeline-content">
+                <h5>La Movida Tropical</h5>
+                <p>En los 90, Argentina vive la explosión de la cumbia. Gilda, Los Palmeras y Antonio Ríos llevan los ritmos caribeños a todas las clases sociales, democratizando la pista de baile.</p>
+                <small class="text-muted">📅 1990-2000</small>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-marker">🎭</div>
+              <div class="timeline-content">
+                <h5>MTV y la Revolución Visual</h5>
+                <p>1981: nace MTV y cambia para siempre cómo consumimos música. El videoclip se vuelve arte, los artistas se convierten en íconos visuales y la música abraza la imagen.</p>
+                <small class="text-muted">📅 1 Agosto, 1981</small>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-marker">📱</div>
+              <div class="timeline-content">
+                <h5>El Trap y la Era Digital</h5>
+                <p>2010s: el trap emerge desde Atlanta y conquista el mundo vía streaming. Artistas como Duki, Paulo Londra y Cazzu adaptan el género, creando una nueva escena urbana latinoamericana.</p>
+                <small class="text-muted">📅 2010-presente</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+ <footer class="main-footer">
+    <div class="footer-content">
+      <a href="../index.html" class="logo-link-nav">
+        <span class="logo-row">
+          <span class="logo-emoji-nav">✨</span>
+          <span class="logo-text-nav">MUGIC!</span>
+        </span>
+        <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
+      </a>
+      <div class="footer-links">
+        <div>
+          <div class="footer-link-title">Enlaces Rápidos</div>
+          <a href="genealogia.html">Árbol Genealógico</a>
+          <a href="cronicas.html">Crónicas</a>
+          <a href="laboratorio.html">Laboratorio Musical</a>
+        </div>
+        <div>
+          <div class="footer-link-title pink">Contacto</div>
+          <a href="contacto.html" class="footer-btn">✉️ CONTÁCTANOS</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 MUGIC! | Trabajo Práctico Final - Informática General
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/cronicas.js"></script>
+</body>
+</html>
