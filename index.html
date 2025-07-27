@@ -2,13 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Genealogía Musical | MUGIC!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../src/css/styles.css">
-  <link rel="stylesheet" href="../src/css/genealogia.css">
+  <title>MUGIC!</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="main-header">
+  <!-- HEADER -->
+  <header class="main-header">
   <div class="header-content">
     <a href="index.html" class="logo-link-nav">
       <span class="logo-row">
@@ -19,68 +20,84 @@
     </a>
     <nav class="main-nav">
       <ul>
-        <li><a href="../genealogia/index.html">Genealogía</a></li>
-        <li><a href="../cronicas/index.html">Crónicas</a></li>
-        <li><a href="../laboratorio/index.html">Laboratorio</a></li>
-        <li><a href="../galeria/index.html">Galería</a></li>
-        <li><a href="../historia/index.html">Historia</a></li>
-        <li><a href="../artistas/index.html">Artistas</a></li>
-        <li><a href="../contacto/index.html">Contacto</a></li>
-        <li><a href="../alumno/index.html">Alumno</a></li>
+        <li><a href="paginas/genealogia.html">Genealogía</a></li>
+        <li><a href="paginas/cronicas.html">Crónicas</a></li>
+        <li><a href="paginas/laboratorio.html">Laboratorio</a></li>
+        <li><a href="paginas/galeria.html">Galería</a></li>
+        <li><a href="paginas/historia.html">Historia</a></li>
+        <li><a href="paginas/artistas.html">Artistas</a></li>
+        <li><a href="paginas/contacto.html">Contacto</a></li>
+        <li><a href="paginas/alumnx.html">Alumno</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-  <section class="genealogia-section">
-  <h2 class="genealogia-title">Genealogía</h2>
-  <p class="genealogia-subtitle">Un resumido árbol geneaológico músical</p>
-  <img src="../public/imagenes/arbol.jpg" alt="Árbol caligrama de géneros musicales" class="arbol-img">
-
-  <!-- Sub-sección Semillas -->
-  <h3 class="semillas-title">🌱 Semillas</h3>
-  <p class="semillas-desc">
-    Influencias ocultas en la historia musical.<br>
-    <span style="font-size:0.95em;color:#888;">(Hacé click o tab para descubrir el origen)</span>
+  <!-- HERO -->
+  <section class="hero-section">
+  <div class="hero-emoji">✨</div>
+  <h1 class="hero-title">MUGIC!</h1>
+  <h2 class="hero-subtitle-animada">
+    La música nos encanta <span>🪄</span>
+  </h2>
+  <p class="hero-desc">
+    Descubre la alquimia de los sonidos y las historias detrás de cada ritmo
   </p>
-  <div class="semillas-grid">
-    <div class="semilla-card" tabindex="0">
-      <div class="semilla-titulo">Flamenco</div>
-      <div class="semilla-origen">🌍 Origen africano y gitano</div>
-      <div class="semilla-desc">
-        El flamenco fusiona raíces andaluzas, árabes, africanas y gitanas en su cante y baile.
-      </div>
-    </div>
-    <div class="semilla-card" tabindex="0">
-      <div class="semilla-titulo">Salsa</div>
-      <div class="semilla-origen">🌎 Caribe y Nueva York</div>
-      <div class="semilla-desc">
-        La salsa surge de la mezcla de ritmos afrocubanos, jazz y música latina en el Caribe y Nueva York.
-      </div>
-    </div>
-    <div class="semilla-card" tabindex="0">
-      <div class="semilla-titulo">Reggaetón</div>
-      <div class="semilla-origen">🇵🇷 Fusión caribeña y urbana</div>
-      <div class="semilla-desc">
-        El reggaetón nace en Puerto Rico, mezclando reggae, dancehall, rap y sonidos latinos urbanos.
-      </div>
-    </div>
-  </div>
-
-  <!-- Sección extra -->
-  <section class="musica-colectiva">
-    <h4>La Música es Colectiva</h4>
-    <p>
-      Cada género musical nació de una comunidad, un movimiento social, un momento histórico.<br>
-      Desde los círculos de jazz en Nueva Orleans hasta las favelas que crearon el funk carioca, la música siempre ha sido un fenómeno colectivo que refleja las experiencias compartidas de las personas.
-    </p>
-    <a href="../cronicas/index.html" class="explorar-btn">
-      🌳 EXPLORAR CONEXIONES
-    </a>
-  </section>
+  <a href="#secciones" class="hero-btn">🌳 COMENZAR LA MAGIA</a>
 </section>
 
- <footer class="main-footer">
+  <!-- SECCIÓN MÚSICA SIN FRONTERAS -->
+  <section class="musica-fronteras">
+    <h2 class="fronteras-title">Música Sin Fronteras</h2>
+    <p class="fronteras-desc">
+      Desde el tango argentino hasta el K-pop coreano, desde el afrobeat nigeriano hasta la bossa nova brasileña, cada región del mundo ha contribuido con sus propios ritmos y melodías al gran mosaico musical global.
+    </p>
+  </section>
+
+  <!-- CARTAS -->
+  <section id="secciones" class="cards-section">
+    <div class="cards-grid">
+      <div class="card card-genealogia">
+        <div class="card-emoji">🌳</div>
+        <div class="card-title">Árbol Genealógico</div>
+        <div class="card-desc">Explora las raíces y conexiones entre géneros musicales</div>
+        <a href="paginas/genealogia.html" class="card-btn card-btn-green">Explorar</a>
+      </div>
+      <div class="card card-cronicas">
+        <div class="card-emoji">📖</div>
+        <div class="card-title">Crónicas Musicales</div>
+        <div class="card-desc">Historias de comunidades y movimientos musicales</div>
+        <a href="paginas/cronicas.html" class="card-btn card-btn-blue">Explorar</a>
+      </div>
+      <div class="card card-laboratorio">
+        <div class="card-emoji">🧪</div>
+        <div class="card-title">Laboratorio Musical</div>
+        <div class="card-desc">Mezcla géneros y descubre nuevas fusiones</div>
+        <a href="paginas/laboratorio.html" class="card-btn card-btn-purple">Explorar</a>
+      </div>
+      <div class="card card-galeria">
+        <div class="card-emoji">🖼️</div>
+        <div class="card-title">Galería</div>
+        <div class="card-desc">Imágenes icónicas de la música mundial</div>
+        <a href="paginas/galeria.html" class="card-btn card-btn-pink">Explorar</a>
+      </div>
+      <div class="card card-historia">
+        <div class="card-emoji">⏳</div>
+        <div class="card-title">Historia</div>
+        <div class="card-desc">La evolución musical a través de la historia</div>
+        <a href="paginas/historia.html" class="card-btn card-btn-yellow">Explorar</a>
+      </div>
+      <div class="card card-artistas">
+        <div class="card-emoji">🎤</div>
+        <div class="card-title">Artistas</div>
+        <div class="card-desc">Colectivos y artistas que cambiaron la música</div>
+        <a href="paginas/artistas.html" class="card-btn card-btn-green">Explorar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
     <div class="footer-content">
       <a href="index.html" class="logo-link-nav">
         <span class="logo-row">
@@ -92,13 +109,13 @@
       <div class="footer-links">
         <div>
           <div class="footer-link-title">Enlaces Rápidos</div>
-          <a href="../genealogia/index.html">Árbol Genealógico</a>
-          <a href="../cronicas/index.html">Crónicas</a>
-          <a href="../laboratorio/index.html">Laboratorio Musical</a>
+          <a href="paginas/genealogia.html">Árbol Genealógico</a>
+          <a href="paginas/cronicas.html">Crónicas</a>
+          <a href="paginas/laboratorio.html">Laboratorio Musical</a>
         </div>
         <div>
           <div class="footer-link-title pink">Contacto</div>
-          <a href="../contacto/index.html" class="footer-btn">✉️ CONTÁCTANOS</a>
+          <a href="paginas/contacto.html" class="footer-btn">✉️ CONTÁCTANOS</a>
         </div>
       </div>
     </div>
@@ -106,7 +123,6 @@
       © 2025 MUGIC! | Trabajo Práctico Final - Informática General
     </div>
   </footer>
-
-  <script src="../src/js/genealogia.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

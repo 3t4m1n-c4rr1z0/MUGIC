@@ -17,6 +17,7 @@
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
   animation: floatTitle 2.5s infinite alternate;
+  display: inline-block;
 }
 @keyframes floatTitle {
   0% { transform: translateY(0);}
@@ -51,9 +52,11 @@
 
 /* Semillas */
 .semillas-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 2.5rem 0 0.5rem 0;
-  background: linear-gradient(90deg, #44bd32, #00bfff, #a18cd1, #feca57);
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 900;
+  background: linear-gradient(90deg, #00bfae 40%, #f48fb1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -126,7 +129,7 @@
 }
 
 .musica-colectiva h4 {
-  color: #e040fb;
+  color: #ef49d0;
   font-family: 'Raleway', Arial, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
