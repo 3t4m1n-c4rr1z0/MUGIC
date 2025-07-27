@@ -1,4 +1,3 @@
-
 .genealogia-container {
     display: flex;
     flex-direction: column;
@@ -6,12 +5,28 @@
     padding: 20px;
 }
 
-.genealogia-title {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
+.genealogia-section {
+  background: linear-gradient(135deg, #e0ffe6 60%, #f3e8ff 100%);
+  border-radius: 1.5rem;
+  max-width: 1100px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 12px #baffc9;
 }
 
+.genealogia-title {
+  font-family: 'Heavy Heap', cursive, sans-serif;
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #44bd32, #00bfff, #a18cd1, #feca57);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 8s ease-in-out infinite;
+  display: inline-block;
+}
 
 .genealogia-paragraph {
     font-size: 1.2em;
@@ -40,4 +55,135 @@
 
 .genealogia-link:hover {
     text-decoration: underline;
+}
+
+.genealogia-desc {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.genealogia-arbol {
+  margin: 2rem 0;
+}
+
+.genealogia-img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #a1c4fd44;
+}
+
+.genealogia-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #44bd32, #baffc9);
+  color: #fff;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.9rem 2.2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #baffc9;
+  transition: background 0.2s, transform 0.2s;
+}
+
+/* Arbol Genealogico Styles */
+.arbol-genealogico {
+  margin: 2.5rem auto 3rem auto;
+  text-align: left;
+  max-width: 700px;
+}
+
+.arbol-lista,
+.arbol-lista ul {
+  list-style-type: none;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.arbol-lista > li {
+  font-size: 1.2rem;
+  margin-bottom: 1.2em;
+}
+
+.arbol-lista li::before {
+  content: "│";
+  position: absolute;
+  left: 0.3em;
+  color: #baffc9;
+  font-size: 1.2em;
+  top: 0;
+  bottom: 0;
+}
+
+.arbol-lista > li::before {
+  content: "";
+}
+
+.arbol-lista strong {
+  color: #44bd32;
+  font-weight: bold;
+  font-size: 1.18em;
+  letter-spacing: 1px;
+}
+
+/* Semillas */
+.semillas-title {
+  font-size: 2rem;
+  margin: 2.5rem 0 0.5rem 0;
+  background: linear-gradient(90deg, #44bd32, #00bfff, #a18cd1, #feca57);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: rainbow 8s ease-in-out infinite;
+}
+
+.semillas-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.semillas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.semilla-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #baffc9;
+  padding: 1.5rem 1.2rem;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.semilla-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 24px #a1c4fd;
+}
+
+.semilla-emoji {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.semilla-titulo {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+  color: #44bd32;
+}
+
+.semilla-desc {
+  font-size: 1rem;
+  color: #555;
 }
