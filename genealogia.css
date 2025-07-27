@@ -9,31 +9,44 @@
 }
 
 .genealogia-title {
-  font-family: 'Heavy Heap', cursive, sans-serif;
-  font-size: 2.7rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #44bd32, #00bfff, #a18cd1, #feca57);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow 8s ease-in-out infinite;
-  display: inline-block;
+  font-family: 'Heavy Heap', 'Raleway', Arial, sans-serif;
+  font-size: 4rem;
+  color: #00bfae;
+  font-weight: 900;
+  text-shadow: 0 4px 18px #a1c4fd, 0 1px 0 #fff;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  animation: floatTitle 2.5s infinite alternate;
+}
+@keyframes floatTitle {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(-8px);}
 }
 
-.genealogia-desc {
+.genealogia-subtitle {
   font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1.2rem;
-  color: #444;
+  font-size: 1.5rem;
+  color: #f48fb1;
+  font-weight: bold;
   margin-bottom: 2rem;
+  letter-spacing: 1px;
 }
 
 .arbol-img {
   display: block;
-  max-width: 100%;
-  margin: 2rem auto;
+  max-width: 500px;
+  width: 95vw;
+  margin: 2rem auto 2.5rem auto;
   border-radius: 1rem;
   box-shadow: 0 2px 12px #a1c4fd44;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .arbol-img { max-width: 90vw; }
+  .genealogia-title { font-size: 2.5rem; }
+  .genealogia-subtitle { font-size: 1.1rem; }
+  .genealogia-section { padding: 1.2rem 0.5rem; }
 }
 
 /* Semillas */
@@ -98,4 +111,59 @@
   font-size: 1.15rem;
   margin-bottom: 0.4rem;
   color: #44bd32;
+}
+
+/* Sección Música Colectiva */
+.musica-colectiva {
+  background: linear-gradient(90deg, #f3e8ff 60%, #e0ffe6 100%);
+  border-radius: 1.2rem;
+  margin: 2.5rem auto 1.5rem auto;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 700px;
+  box-shadow: 0 2px 12px #a1c4fd33;
+  text-align: left;
+  position: relative;
+}
+
+.musica-colectiva h4 {
+  color: #e040fb;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.musica-colectiva p {
+  color: #444;
+  font-size: 1.12rem;
+  margin-bottom: 1.2rem;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+.explorar-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #44bd32 60%, #a1c4fd 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #baffc9;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 0.5rem;
+}
+.explorar-btn:hover {
+  background: linear-gradient(90deg, #a1c4fd 60%, #44bd32 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 700px) {
+  .musica-colectiva {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+  }
+  .musica-colectiva h4 { font-size: 1.15rem; }
+  .musica-colectiva p { font-size: 0.98rem; }
+  .explorar-btn { font-size: 0.98rem; padding: 0.6rem 1.2rem; }
 }
