@@ -1,121 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUGIC!</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/css/styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUGIC!</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/styles.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <!-- NAV: Logo como botón/enlace al inicio -->
-            <a href="index.html" class="logo-link-nav">
-                <span class="logo-emoji-nav">✨</span>
-                <span class="logo-text-nav">MUGIC!</span>
-                <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="../genealogia/index.html">Genealogía</a></li>
-                    <li><a href="../cronicas/index.html">Crónicas</a></li>
-                    <li><a href="../laboratorio/index.html">Laboratorio</a></li>
-                    <li><a href="../galeria/index.html">Galería</a></li>
-                    <li><a href="../historia/index.html">Historia</a></li>
-                    <li><a href="../artistas/index.html">Artistas</a></li>
-                    <li><a href="../contacto/index.html">Contacto</a></li>
-                    <li><a href="../alumno/index.html">Alumno</a></li>
-                </ul>
-            </nav>
+  <!-- HEADER -->
+  <header class="main-header">
+  <div class="header-content">
+    <a href="index.html" class="logo-link-nav">
+      <span class="logo-row">
+        <span class="logo-emoji-nav">✨</span>
+        <span class="logo-text-nav">MUGIC!</span>
+      </span>
+      <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../genealogia/index.html">Genealogía</a></li>
+        <li><a href="../cronicas/index.html">Crónicas</a></li>
+        <li><a href="../laboratorio/index.html">Laboratorio</a></li>
+        <li><a href="../galeria/index.html">Galería</a></li>
+        <li><a href="../historia/index.html">Historia</a></li>
+        <li><a href="../artistas/index.html">Artistas</a></li>
+        <li><a href="../contacto/index.html">Contacto</a></li>
+        <li><a href="../alumno/index.html">Alumno</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+  <div class="hero-emoji">✨</div>
+  <h1 class="hero-title">MUGIC!</h1>
+  <h2 class="hero-subtitle-animada">
+    La música nos encanta <span>🪄</span>
+  </h2>
+  <p class="hero-desc">
+    Descubre la alquimia de los sonidos y las historias detrás de cada ritmo
+  </p>
+  <a href="#secciones" class="hero-btn">🌳 COMENZAR LA MAGIA</a>
+</section>
+
+  <!-- SECCIÓN MÚSICA SIN FRONTERAS -->
+  <section class="musica-fronteras">
+    <h2 class="fronteras-title">Música Sin Fronteras</h2>
+    <p class="fronteras-desc">
+      Desde el tango argentino hasta el K-pop coreano, desde el afrobeat nigeriano hasta la bossa nova brasileña, cada región del mundo ha contribuido con sus propios ritmos y melodías al gran mosaico musical global.
+    </p>
+  </section>
+
+  <!-- CARTAS -->
+  <section id="secciones" class="cards-section">
+    <div class="cards-grid">
+      <div class="card card-genealogia">
+        <div class="card-emoji">🌳</div>
+        <div class="card-title">Árbol Genealógico</div>
+        <div class="card-desc">Explora las raíces y conexiones entre géneros musicales</div>
+        <a href="../genealogia/index.html" class="card-btn card-btn-green">Explorar</a>
+      </div>
+      <div class="card card-cronicas">
+        <div class="card-emoji">📖</div>
+        <div class="card-title">Crónicas Musicales</div>
+        <div class="card-desc">Historias de comunidades y movimientos musicales</div>
+        <a href="../cronicas/index.html" class="card-btn card-btn-blue">Explorar</a>
+      </div>
+      <div class="card card-laboratorio">
+        <div class="card-emoji">🧪</div>
+        <div class="card-title">Laboratorio Musical</div>
+        <div class="card-desc">Mezcla géneros y descubre nuevas fusiones</div>
+        <a href="../laboratorio/index.html" class="card-btn card-btn-purple">Explorar</a>
+      </div>
+      <div class="card card-galeria">
+        <div class="card-emoji">🖼️</div>
+        <div class="card-title">Galería</div>
+        <div class="card-desc">Imágenes icónicas de la música mundial</div>
+        <a href="../galeria/index.html" class="card-btn card-btn-pink">Explorar</a>
+      </div>
+      <div class="card card-historia">
+        <div class="card-emoji">⏳</div>
+        <div class="card-title">Historia</div>
+        <div class="card-desc">La evolución musical a través de la historia</div>
+        <a href="../historia/index.html" class="card-btn card-btn-yellow">Explorar</a>
+      </div>
+      <div class="card card-artistas">
+        <div class="card-emoji">🎤</div>
+        <div class="card-title">Artistas</div>
+        <div class="card-desc">Colectivos y artistas que cambiaron la música</div>
+        <a href="../artistas/index.html" class="card-btn card-btn-green">Explorar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <a href="index.html" class="logo-link-nav">
+        <span class="logo-row">
+          <span class="logo-emoji-nav">✨</span>
+          <span class="logo-text-nav">MUGIC!</span>
+        </span>
+        <span class="logo-subtitle-nav">La música nos encanta <span>🪄</span></span>
+      </a>
+      <div class="footer-links">
+        <div>
+          <div class="footer-link-title">Enlaces Rápidos</div>
+          <a href="../genealogia/index.html">Árbol Genealógico</a>
+          <a href="../cronicas/index.html">Crónicas</a>
+          <a href="../laboratorio/index.html">Laboratorio Musical</a>
         </div>
-    </header>
-
-    <main>
-        <section class="hero-section">
-            <h1 class="hero-title">MUGIC! <span class="sparkle-icon">✨</span></h1>
-            <h2 class="hero-subtitle">La música nos encanta <span>🪄</span></h2>
-            <p class="hero-desc">Descubre la alquimia de los sonidos y las historias detrás de cada ritmo</p>
-            <a href="#secciones" class="hero-btn">🌳 COMENZAR LA MAGIA</a>
-        </section>
-
-        <section id="secciones" class="cards-section">
-            <div class="cards-grid">
-                <div class="card card-genealogia">
-                    <div class="card-emoji">🌳</div>
-                    <div class="card-title">Árbol Genealógico</div>
-                    <div class="card-desc">Explora las raíces y conexiones entre géneros musicales</div>
-                    <a href="../genealogia/index.html" class="card-btn card-btn-green">Explorar</a>
-                </div>
-                <div class="card card-cronicas">
-                    <div class="card-emoji">📖</div>
-                    <div class="card-title">Crónicas Musicales</div>
-                    <div class="card-desc">Historias de comunidades y movimientos musicales</div>
-                    <a href="../cronicas/index.html" class="card-btn card-btn-blue">Explorar</a>
-                </div>
-                <div class="card card-laboratorio">
-                    <div class="card-emoji">🧪</div>
-                    <div class="card-title">Laboratorio Musical</div>
-                    <div class="card-desc">Mezcla géneros y descubre nuevas fusiones</div>
-                    <a href="../laboratorio/index.html" class="card-btn card-btn-purple">Explorar</a>
-                </div>
-                <div class="card card-galeria">
-                    <div class="card-emoji">🖼️</div>
-                    <div class="card-title">Galería</div>
-                    <div class="card-desc">Imágenes icónicas de la música mundial</div>
-                    <a href="../galeria/index.html" class="card-btn card-btn-pink">Explorar</a>
-                </div>
-                <div class="card card-historia">
-                    <div class="card-emoji">⏳</div>
-                    <div class="card-title">Historia</div>
-                    <div class="card-desc">La evolución musical a través de la historia</div>
-                    <a href="../historia/index.html" class="card-btn card-btn-yellow">Explorar</a>
-                </div>
-                <div class="card card-artistas">
-                    <div class="card-emoji">🎤</div>
-                    <div class="card-title">Artistas</div>
-                    <div class="card-desc">Colectivos y artistas que cambiaron la música</div>
-                    <a href="../artistas/index.html" class="card-btn card-btn-green">Explorar</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="musica-fronteras">
-            <h2 class="fronteras-title">Música Sin Fronteras</h2>
-            <p class="fronteras-desc">
-                Desde el tango argentino hasta el K-pop coreano, desde el afrobeat nigeriano hasta la bossa nova brasileña, cada región del mundo ha contribuido con sus propios ritmos y melodías al gran mosaico musical global.
-            </p>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-logo-block">
-                <a href="index.html" class="logo-block logo-link">
-                    <span class="logo-emoji">✨</span>
-                    <span class="logo-text">MUGIC!</span>
-                    <span class="logo-subtitle">La música nos encanta <span>🪄</span></span>
-                </a>
-                <div class="footer-desc">Explorando la alquimia musical del mundo</div>
-            </div>
-            <div class="footer-links">
-                <div>
-                    <div class="footer-link-title">Enlaces Rápidos</div>
-                    <a href="../genealogia/index.html">Árbol Genealógico</a>
-                    <a href="../cronicas/index.html">Crónicas</a>
-                    <a href="../laboratorio/index.html">Laboratorio Musical</a>
-                </div>
-                <div>
-                    <div class="footer-link-title pink">Contacto</div>
-                    <a href="../contacto/index.html" class="footer-btn">✉️ CONTÁCTANOS</a>
-                </div>
-            </div>
+        <div>
+          <div class="footer-link-title pink">Contacto</div>
+          <a href="../contacto/index.html" class="footer-btn">✉️ CONTÁCTANOS</a>
         </div>
-        <div class="footer-copy">
-            © 2025 MUGIC! | Trabajo Práctico Final - Informática General
-        </div>
-    </footer>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 MUGIC! | Trabajo Práctico Final - Informática General
+    </div>
+  </footer>
 </body>
 </html>
