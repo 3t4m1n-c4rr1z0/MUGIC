@@ -13,6 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+// Función para mostrar/ocultar anécdotas
+function toggleAnecdota(button) {
+    const card = button.closest('.card-body, .timeline-content');
+    const anecdota = card.querySelector('.anecdota, .bisagra-anecdota');
+    
+    if (anecdota.classList.contains('show')) {
+        // Ocultar anécdota
+        anecdota.classList.remove('show');
+        button.textContent = '⭐ Anécdota';
+        button.classList.remove('active');
+    } else {
+        // Mostrar anécdota
+        anecdota.classList.add('show');
+        button.textContent = '✨ Ocultar';
+        button.classList.add('active');
+    }
+}
+
 // Animación inicial
 function animateOnLoad() {
     const cards = document.querySelectorAll('.cronicas-card, .escenas-card');
@@ -94,23 +112,3 @@ function addTabEffects() {
         });
     });
 }
-
-// Función para agregar efecto de "lectura completada"
-function markAsRead(cardElement) {
-    cardElement.classList.add('read');
-    cardElement.style.opacity = '0.7';
-    
-    // Agregar checkmark
-    const emoji = cardElement.querySelector('.cronicas-emoji, .escenas-emoji');
-    if (emoji && !emoji.textContent.includes('✓')) {
-        emoji.textContent = emoji.textContent + ' ✓';
-    }
-}
-
-// Event listeners para marcar como leído al hacer click
-document.addEventListener('click', function(e) {
-    if (e.target.closest('.cronicas-card, .escenas-card')) {
-        const card = e.target.closest('.cronicas-card, .escenas-card');
-        markAsRead(card);
-    }
-});

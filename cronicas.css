@@ -2,26 +2,41 @@
 
 .cronicas-section {
   padding: 60px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #b0e0f3 0%, #f1cef0 100%);
   min-height: 100vh;
 }
 
 .cronicas-title {
-  font-size: 2.5rem;
+  font-family: 'Heavy Heap', cursive;
+  font-size: 4rem;
   font-weight: bold;
-  color: white;
+  color: #7bd5ff;
   margin-bottom: 1rem;
+  text-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(255, 154, 123, 0.4),
+    0 12px 24px rgba(255, 154, 123, 0.2);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+  transition: all 0.3s ease;
+}
+
+.cronicas-title:hover {
+  transform: translateY(-2px);
+  text-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    0 12px 24px rgba(255, 154, 123, 0.5),
+    0 18px 36px rgba(255, 154, 123, 0.3);
 }
 
 .cronicas-subtitle {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 3rem;
 }
 
 /* ===== NAVEGACIÓN DE PESTAÑAS ===== */
 .cronicas-nav .nav-pills .nav-link {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 154, 123, 0.2);
   color: white;
   border: 2px solid transparent;
   margin: 0 5px;
@@ -31,14 +46,16 @@
 }
 
 .cronicas-nav .nav-pills .nav-link:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 154, 123, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 154, 123, 0.3);
 }
 
 .cronicas-nav .nav-pills .nav-link.active {
-  background: white;
-  color: #667eea;
-  border-color: white;
+  background: #FF9A7B;
+  color: white;
+  border-color: #FF9A7B;
+  box-shadow: 0 5px 20px rgba(255, 154, 123, 0.4);
 }
 
 /* ===== TARJETAS PRINCIPALES ===== */
@@ -46,14 +63,16 @@
   background: white;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(135, 206, 235, 0.2);
   transition: all 0.3s ease;
   overflow: hidden;
+  border-top: 4px solid #FF9A7B;
 }
 
 .cronicas-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(255, 154, 123, 0.3);
+  border-top: 4px solid #87CEEB;
 }
 
 .cronicas-emoji {
@@ -77,43 +96,102 @@
 
 /* ===== ANÉCDOTAS ===== */
 .anecdota, .bisagra-anecdota {
-  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-  border-left: 4px solid #667eea;
+  background: linear-gradient(45deg, #F0F8FF, #E6F3FF);
+  border-left: 4px solid #87CEEB;
   padding: 10px 15px;
   margin: 15px 0;
   border-radius: 8px;
   font-size: 0.9rem;
   line-height: 1.4;
   color: #495057;
+  display: none; /* Oculto por defecto */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.anecdota.show, .bisagra-anecdota.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .anecdota strong, .bisagra-anecdota strong {
-  color: #667eea;
+  color: #FF9A7B;
   font-weight: 600;
 }
 
+/* ===== BOTÓN ANÉCDOTA ===== */
+.anecdota-btn {
+  background: linear-gradient(45deg, #FF9A7B, #FFB499);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(255, 154, 123, 0.3);
+}
+
+.anecdota-btn:hover {
+  background: linear-gradient(45deg, #87CEEB, #B0E0F3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(135, 206, 235, 0.4);
+}
+
+.anecdota-btn.active {
+  background: linear-gradient(45deg, #87CEEB, #B0E0F3);
+}
+
 .escenas-card .anecdota {
-  background: rgba(255, 255, 255, 0.2);
-  border-left: 4px solid white;
-  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 154, 123, 0.2);
+  border-left: 4px solid #FF9A7B;
+  color: rgba(255, 255, 255, 0.95);
+  display: none; /* Oculto por defecto */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.escenas-card .anecdota.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .escenas-card .anecdota strong {
   color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.escenas-card .anecdota-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.escenas-card .anecdota-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 /* ===== ESCENAS EN FUGA ===== */
 .escenas-card {
-  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  background: linear-gradient(135deg, #FF9A7B, #FF8C69);
   border: none;
   border-radius: 15px;
   color: white;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 154, 123, 0.3);
 }
 
 .escenas-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 15px 40px rgba(255, 154, 123, 0.5);
+  background: linear-gradient(135deg, #87CEEB, #5F9EA0);
 }
 
 .escenas-emoji {
@@ -141,6 +219,8 @@
 .escenas-tags .badge {
   margin: 0 3px;
   font-size: 0.8rem;
+  background: rgba(135, 206, 235, 0.8) !important;
+  color: white;
 }
 
 /* ===== LÍNEA DE TIEMPO (BISAGRAS) ===== */
@@ -155,9 +235,10 @@
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 3px;
-  background: white;
+  width: 4px;
+  background: linear-gradient(to bottom, #FF9A7B, #87CEEB);
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .timeline-item {
@@ -180,7 +261,7 @@
   left: 50%;
   transform: translateX(-50%);
   background: white;
-  color: #667eea;
+  color: #FF9A7B;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -189,7 +270,16 @@
   justify-content: center;
   font-size: 1.5rem;
   z-index: 2;
-  border: 4px solid #667eea;
+  border: 4px solid #87CEEB;
+  box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timeline-marker:hover {
+  background: #FF9A7B;
+  color: white;
+  border-color: #FF9A7B;
+  transform: translateX(-50%) scale(1.1);
 }
 
 .timeline-content {
@@ -197,8 +287,15 @@
   padding: 20px 25px;
   border-radius: 15px;
   width: 45%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(135, 206, 235, 0.2);
   position: relative;
+  border-top: 3px solid #FF9A7B;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  box-shadow: 0 12px 35px rgba(255, 154, 123, 0.3);
+  transform: translateY(-2px);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -212,9 +309,10 @@
 }
 
 .timeline-content h5 {
-  color: #667eea;
+  color: #FF9A7B;
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .timeline-content p {
