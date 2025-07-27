@@ -1,0 +1,267 @@
+/* ===== CRÓNICAS MUSICALES ===== */
+
+.cronicas-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.cronicas-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cronicas-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+}
+
+/* ===== NAVEGACIÓN DE PESTAÑAS ===== */
+.cronicas-nav .nav-pills .nav-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid transparent;
+  margin: 0 5px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cronicas-nav .nav-pills .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.cronicas-nav .nav-pills .nav-link.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+/* ===== TARJETAS PRINCIPALES ===== */
+.cronicas-card {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cronicas-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.cronicas-emoji {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cronicas-card .card-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.cronicas-card .card-text {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ===== ANÉCDOTAS ===== */
+.anecdota, .bisagra-anecdota {
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  border-left: 4px solid #667eea;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #495057;
+}
+
+.anecdota strong, .bisagra-anecdota strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.escenas-card .anecdota {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid white;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.escenas-card .anecdota strong {
+  color: white;
+}
+
+/* ===== ESCENAS EN FUGA ===== */
+.escenas-card {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.escenas-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+}
+
+.escenas-emoji {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.escenas-card .card-title {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.escenas-card .card-text {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.escenas-tags {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.escenas-tags .badge {
+  margin: 0 3px;
+  font-size: 0.8rem;
+}
+
+/* ===== LÍNEA DE TIEMPO (BISAGRAS) ===== */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: white;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: #667eea;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 2;
+  border: 4px solid #667eea;
+}
+
+.timeline-content {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 45%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.timeline-content h5 {
+  color: #667eea;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .cronicas-title {
+    font-size: 2rem;
+  }
+  
+  .cronicas-nav .nav-pills .nav-link {
+    font-size: 0.9rem;
+    margin: 5px 2px;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+  }
+  
+  .timeline-item {
+    flex-direction: row !important;
+  }
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
