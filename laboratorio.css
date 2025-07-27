@@ -11,28 +11,28 @@
   font-family: 'Heavy Heap', cursive;
   font-size: 3.5rem;
   font-weight: bold;
-  color: hsl(280, 40%, 35%);
+  color: hsl(290, 50%, 35%);
   margin-bottom: 1rem;
   text-shadow: 
     0 2px 4px rgba(0, 0, 0, 0.1),
-    0 4px 8px hsl(280, 30%, 85%);
+    0 4px 8px hsl(45, 60%, 85%);
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
 }
 
 .laboratorio-subtitle {
   font-size: 1.3rem;
-  color: hsl(260, 20%, 40%);
+  color: hsl(290, 30%, 40%);
   margin-bottom: 3rem;
 }
 
 /* ===== PANEL DE PUNTUACIÓN ===== */
 .score-panel {
-  background: hsl(0, 0%, 100%, 0.7);
+  background: hsl(0, 0%, 100%, 0.8);
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 30px;
   backdrop-filter: blur(10px);
-  border: 1px solid hsl(280, 20%, 90%);
+  border: 1px solid hsl(290, 30%, 85%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -46,7 +46,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: bold;
-  color: hsl(173, 50%, 45%);
+  color: hsl(45, 70%, 50%);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -62,7 +62,7 @@
 }
 
 .section-title {
-  color: hsl(280, 40%, 40%);
+  color: hsl(290, 50%, 40%);
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
@@ -71,17 +71,17 @@
 
 /* ===== BIBLIOTECA DE GÉNEROS ===== */
 .genres-library {
-  background: hsl(0, 0%, 100%, 0.6);
+  background: hsl(0, 0%, 100%, 0.7);
   border-radius: 15px;
   padding: 20px;
   min-height: 400px;
-  border: 2px dashed hsl(280, 30%, 85%);
+  border: 2px dashed hsl(290, 40%, 80%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .genre-card {
-  background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(280, 20%, 96%) 100%);
-  color: hsl(240, 15%, 25%);
+  background: linear-gradient(135deg, hsl(45, 60%, 90%) 0%, hsl(45, 50%, 88%) 100%);
+  color: hsl(290, 40%, 30%);
   padding: 15px;
   margin: 10px 0;
   border-radius: 12px;
@@ -89,15 +89,15 @@
   transition: all 0.3s ease;
   text-align: center;
   font-weight: 500;
-  border: 2px solid hsl(280, 20%, 90%);
+  border: 2px solid hsl(45, 40%, 80%);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .genre-card:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  border-color: hsl(173, 50%, 60%);
-  background: linear-gradient(135deg, hsl(173, 30%, 95%) 0%, hsl(280, 20%, 94%) 100%);
+  border-color: hsl(45, 70%, 60%);
+  background: linear-gradient(135deg, hsl(45, 70%, 85%) 0%, hsl(45, 60%, 82%) 100%);
 }
 
 .genre-card:active {
@@ -116,7 +116,7 @@
   border-radius: 20px;
   padding: 20px;
   min-height: 400px;
-  border: 3px dashed hsl(173, 40%, 70%);
+  border: 3px dashed hsl(290, 40%, 70%);
   text-align: center;
   position: relative;
   transition: all 0.3s ease;
@@ -124,8 +124,8 @@
 }
 
 .fusion-cauldron.drag-over {
-  background: hsl(173, 30%, 95%);
-  border-color: hsl(173, 50%, 50%);
+  background: hsl(45, 50%, 95%);
+  border-color: hsl(45, 70%, 60%);
   transform: scale(1.01);
 }
 
@@ -156,13 +156,13 @@
 }
 
 .selected-genre {
-  background: linear-gradient(45deg, hsl(173, 40%, 70%), hsl(173, 35%, 80%));
-  color: hsl(173, 60%, 25%);
+  background: linear-gradient(45deg, hsl(45, 70%, 85%) 0%, hsl(45, 60%, 82%) 100%);
+  color: hsl(290, 50%, 30%);
   padding: 10px 15px;
   border-radius: 20px;
   font-weight: bold;
   position: relative;
-  border: 2px solid hsl(173, 30%, 60%);
+  border: 2px solid hsl(45, 50%, 75%);
 }
 
 .remove-genre {
@@ -180,7 +180,7 @@
 }
 
 .fusion-btn {
-  background: linear-gradient(45deg, hsl(173, 50%, 60%), hsl(173, 45%, 50%));
+  background: linear-gradient(45deg, hsl(290, 50%, 60%), hsl(45, 70%, 55%));
   color: hsl(0, 0%, 98%);
   border: none;
   padding: 15px 30px;
@@ -196,7 +196,7 @@
 
 .fusion-btn:enabled:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px hsl(173, 50%, 60%, 0.3);
+  box-shadow: 0 8px 20px hsl(290, 50%, 60%, 0.3);
 }
 
 .fusion-btn:disabled {
@@ -210,7 +210,7 @@
   border-radius: 15px;
   padding: 20px;
   min-height: 400px;
-  border: 2px solid hsl(173, 30%, 80%);
+  border: 2px solid hsl(290, 30%, 80%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -221,7 +221,7 @@
   justify-content: center;
   text-align: center;
   height: 100%;
-  color: hsl(173, 30%, 45%);
+  color: hsl(290, 30%, 50%);
 }
 
 .result-emoji {
@@ -230,13 +230,13 @@
 }
 
 .fusion-result {
-  background: linear-gradient(45deg, hsl(173, 40%, 85%), hsl(43, 50%, 90%));
-  color: hsl(173, 50%, 30%);
+  background: linear-gradient(45deg, hsl(290, 40%, 85%), hsl(45, 60%, 90%));
+  color: hsl(290, 50%, 30%);
   padding: 20px;
   border-radius: 15px;
   text-align: center;
   animation: fadeInScale 0.6s ease-out;
-  border: 2px solid hsl(173, 30%, 70%);
+  border: 2px solid hsl(290, 30%, 75%);
 }
 
 @keyframes fadeInScale {
@@ -309,7 +309,7 @@
 
 .discovery-placeholder {
   text-align: center;
-  color: hsl(0, 0%, 70%);
+  color: hsl(290, 30%, 60%);
   font-style: italic;
   grid-column: 1 / -1;
   padding: 40px;
@@ -317,15 +317,17 @@
 
 /* ===== INSTRUCCIONES ===== */
 .instructions-panel {
-  background: hsl(240, 6%, 10%, 0.6);
+  background: hsl(290, 30%, 95%);
   border-radius: 15px;
   padding: 20px;
   margin-top: 30px;
   backdrop-filter: blur(10px);
+  border: 2px solid hsl(290, 25%, 85%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .instructions-panel h5 {
-  color: hsl(43, 74%, 66%);
+  color: hsl(45, 70%, 50%);
   margin-bottom: 15px;
 }
 
@@ -348,8 +350,8 @@
 
 /* ===== TIENDA DE GÉNEROS ===== */
 .shop-item {
-  background: hsl(12, 76%, 61%, 0.1);
-  border: 2px solid hsl(12, 76%, 61%, 0.3);
+  background: hsl(290, 30%, 95%);
+  border: 2px solid hsl(290, 30%, 80%);
   border-radius: 10px;
   padding: 12px;
   margin: 8px 0;
@@ -360,8 +362,8 @@
 }
 
 .shop-item:hover {
-  background: hsl(12, 76%, 61%, 0.2);
-  border-color: hsl(12, 76%, 61%, 0.5);
+  background: hsl(45, 50%, 95%);
+  border-color: hsl(45, 60%, 70%);
 }
 
 .shop-genre {
@@ -376,18 +378,18 @@
 
 .shop-name {
   font-weight: bold;
-  color: hsl(0, 0%, 98%);
+  color: hsl(290, 40%, 30%);
   font-size: 0.9rem;
 }
 
 .shop-cost {
-  color: hsl(43, 74%, 66%);
+  color: hsl(45, 70%, 50%);
   font-weight: bold;
   font-size: 0.85rem;
 }
 
 .shop-btn {
-  background: linear-gradient(45deg, hsl(12, 76%, 61%), hsl(43, 74%, 66%));
+  background: linear-gradient(45deg, hsl(290, 50%, 60%), hsl(45, 70%, 55%));
   color: hsl(0, 0%, 98%);
   border: none;
   padding: 6px 12px;
@@ -458,7 +460,7 @@
 /* ===== ANIMACIÓN DE CRÉDITOS ===== */
 @keyframes creditGain {
   0% { transform: scale(1); }
-  50% { transform: scale(1.2); color: hsl(43, 74%, 66%); }
+  50% { transform: scale(1.2); color: hsl(45, 70%, 50%); }
   100% { transform: scale(1); }
 }
 
