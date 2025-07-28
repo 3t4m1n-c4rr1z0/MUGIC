@@ -1,4 +1,4 @@
-// LABORATORIO DE ALQUIMIA MUSICAL - Versión Simplificada
+// LABORATORIO DE ALQUIMIA MUSICAL 
 
 class MusicAlchemyLab {
   constructor() {
@@ -231,6 +231,7 @@ class MusicAlchemyLab {
 
   startGame() {
     // Reiniciar todo al empezar
+    this.maxAttempts = 20; // Resetear a 20 intentos base
     this.attempts = 0;
     this.selectedGenres = [];
     this.discoveredGenres = [];
@@ -374,17 +375,13 @@ class MusicAlchemyLab {
         // ¡Nuevo descubrimiento!
         resultGenre.discovered = true;
         this.discoveredGenres.push(resultGenre.id);
-        const points = combination.level === 2 ? 20 : 10;
-        this.showSuccess(resultGenre, points, combination.level);
+        this.showSuccess(resultGenre, combination.level);
       } else {
         this.showMessage(`Ya habías descubierto ${resultGenre.name}`);
       }
     } else {
       // Combinación no válida
-      let message = this.selectedGenres.length === 3 
-        ? "🔬 Combinación de nivel 2 no válida. ¡Estos 3 géneros no pueden fusionarse así!" 
-        : "💥 Esta combinación no es histórica. ¡Intenta otra mezcla!";
-      this.showMessage(message);
+      this.showMessage("❌ No se encuentra esa combinación en el laboratorio");
     }
 
     this.clearSelection();
@@ -401,16 +398,28 @@ class MusicAlchemyLab {
     });
   }
 
-  showSuccess(genre, points, level) {
+  showSuccess(genre, level) {
     const levelText = level === 2 ? "¡NIVEL 2! " : "";
-    const message = `${levelText}¡Descubriste ${genre.emoji} ${genre.name}! +${points} puntos`;
+    const message = `${levelText}¡Descubriste ${genre.emoji} ${genre.name}!`;
     this.showMessage(message);
     
-    // Mostrar aviso de nivel 2 la primera vez
-    if (level === 2 && !this.showedLevel2Message) {
+    // Verificar si se completaron todos los géneros de nivel 1
+    this.checkLevel1Complete();
+  }
+
+  checkLevel1Complete() {
+    // Contar géneros de nivel 1 descubiertos
+    const level1Genres = this.genres.filter(g => g.level === 1);
+    const level1Discovered = level1Genres.filter(g => g.discovered);
+    
+    // Si se descubrieron los 10 géneros de nivel 1 y no se mostró el mensaje
+    if (level1Discovered.length === 10 && !this.showedLevel2Message) {
       this.showedLevel2Message = true;
+      // Dar 5 intentos extra para el nivel 2
+      this.maxAttempts += 5;
       setTimeout(() => {
-        this.showMessage("🎯 Nivel 2: Ahora las combinaciones son de a 3 géneros. ¡Suerte!");
+        this.showLongMessage("🎯 ¡Completaste el Nivel 1! Ahora las combinaciones son de a 3 géneros. ¡+5 intentos extra!");
+        this.updateDisplay(); // Actualizar la pantalla para mostrar los nuevos intentos
       }, 3500);
     }
   }
@@ -425,6 +434,31 @@ class MusicAlchemyLab {
     `;
     document.body.appendChild(modal);
     setTimeout(() => modal.remove(), 3000);
+  }
+
+  showLongMessage(message) {
+    const modal = document.createElement('div');
+    modal.className = 'game-message';
+    modal.innerHTML = `
+      <div class="message-card">
+        <p id="message-text">${message}</p>
+        <small style="color: #666; font-size: 12px; margin-top: 10px; display: block;">Haz click para cerrar</small>
+      </div>
+    `;
+    
+    // Hacer que se pueda cerrar con click
+    modal.addEventListener('click', () => {
+      modal.remove();
+    });
+    
+    document.body.appendChild(modal);
+    
+    // Auto-cerrar después de 8 segundos (más tiempo para leer)
+    setTimeout(() => {
+      if (modal.parentNode) {
+        modal.remove();
+      }
+    }, 8000);
   }
 
   clearSelection() {
