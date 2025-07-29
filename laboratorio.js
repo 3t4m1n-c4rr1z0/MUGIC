@@ -8,6 +8,8 @@ class MusicAlchemyLab {
     this.selectedGenres = [];
     this.discoveredGenres = [];
     this.showedLevel2Message = false;
+    this.currentLevel = 1; // Controla el nivel actual del juego
+    this.isLevel2MessageVisible = false; // Controla si el mensaje de nivel 2 está visible
     
     this.genres = [
       // GÉNEROS BASE
@@ -150,6 +152,17 @@ class MusicAlchemyLab {
         community: "Comunidades afroamericanas",
       },
 
+      {
+        id: "pop",
+        name: "Pop",
+        emoji: "🎵",
+        discovered: false,
+        isBase: false,
+        level: 1,
+        description: "Música popular comercial",
+        community: "Industria musical mainstream",
+      },
+
       // NIVEL 2 - TRES GÉNEROS
       {
         id: "soul",
@@ -161,6 +174,27 @@ class MusicAlchemyLab {
         description: "Alma de la música afroamericana",
         community: "Detroit y Memphis",
       },
+      {
+        id: "disco",
+        name: "Disco",
+        emoji: "🪩",
+        discovered: false,
+        isBase: false,
+        level: 2,
+        description: "Música de baile nocturna",
+        community: "Discotecas de los 70",
+      },
+      {
+        id: "electronica",
+        name: "Música Electrónica",
+        emoji: "🎛️",
+        discovered: false,
+        isBase: false,
+        level: 2,
+        description: "Música creada con instrumentos electrónicos",
+        community: "Estudios y clubes europeos",
+      },
+
       {
         id: "hip-hop",
         name: "Hip Hop",
@@ -174,22 +208,12 @@ class MusicAlchemyLab {
       {
         id: "reggaeton",
         name: "Reggaeton",
-        emoji: "🎛️",
+        emoji: "🔥",
         discovered: false,
         isBase: false,
         level: 2,
         description: "Música urbana latina",
         community: "Puerto Rico y Latinoamérica",
-      },
-      {
-        id: "disco",
-        name: "Disco",
-        emoji: "🪩",
-        discovered: false,
-        isBase: false,
-        level: 2,
-        description: "Música de baile nocturna",
-        community: "Discotecas de los 70",
       },
       {
         id: "ska",
@@ -205,24 +229,26 @@ class MusicAlchemyLab {
 
     // COMBINACIONES VALIDAS
     this.validCombinations = [
-      // NIVEL 1
+      // NIVEL 1 - SOLO combinaciones de 2 géneros (directas desde bases)
       { parents: ["african-traditional", "spiritual"], result: "gospel", level: 1 },
       { parents: ["african-traditional", "folk-ancestral"], result: "cumbia", level: 1 },
       { parents: ["folk-ancestral", "spiritual"], result: "folk", level: 1 },
-      { parents: ["cumbia", "african-traditional"], result: "salsa", level: 1 },
       { parents: ["african-traditional", "european-classical"], result: "jazz", level: 1 },
-      { parents: ["folk", "european-classical"], result: "country", level: 1 },
-      { parents: ["country", "blues"], result: "rock-and-roll", level: 1 },
-      { parents: ["folk", "african-traditional"], result: "reggae", level: 1 },
+      { parents: ["folk-ancestral", "european-classical"], result: "country", level: 1 },
       { parents: ["gospel", "african-traditional"], result: "blues", level: 1 },
-      { parents: ["jazz", "gospel"], result: "funk", level: 1 },
+      { parents: ["blues", "european-classical"], result: "rock-and-roll", level: 1 },
+      { parents: ["folk", "african-traditional"], result: "reggae", level: 1 },
+      { parents: ["jazz", "spiritual"], result: "funk", level: 1 },
+      { parents: ["jazz", "folk"], result: "pop", level: 1 },
+      { parents: ["cumbia", "jazz"], result: "salsa", level: 1 },
       
-      // NIVEL 2
-      { parents: ["gospel", "jazz", "blues"], result: "soul", level: 2 },
-      { parents: ["soul", "rock-and-roll", "funk"], result: "hip-hop", level: 2 },
-      { parents: ["salsa", "cumbia", "funk"], result: "reggaeton", level: 2 },
-      { parents: ["rock-and-roll", "funk"], result: "disco", level: 2 },
-      { parents: ["reggae", "rock-and-roll", "funk"], result: "ska", level: 2 },
+      // NIVEL 2 - SOLO combinaciones de 3 géneros
+      { parents: ["gospel", "blues", "jazz"], result: "soul", level: 2 },
+      { parents: ["funk", "soul", "pop"], result: "disco", level: 2 },
+      { parents: ["disco", "pop", "rock-and-roll"], result: "electronica", level: 2 },
+      { parents: ["reggae", "funk", "soul"], result: "hip-hop", level: 2 },
+      { parents: ["reggae", "pop", "salsa"], result: "reggaeton", level: 2 },
+      { parents: ["jazz", "reggae", "folk"], result: "ska", level: 2 },
     ];
 
     // Inicializar el juego
@@ -236,6 +262,8 @@ class MusicAlchemyLab {
     this.selectedGenres = [];
     this.discoveredGenres = [];
     this.showedLevel2Message = false;
+    this.currentLevel = 1;
+    this.isLevel2MessageVisible = false;
     
     // Solo los géneros base están disponibles
     this.genres.forEach(genre => { 
@@ -289,12 +317,15 @@ class MusicAlchemyLab {
   selectGenre(genre) {
     if (!genre.discovered) return;
     
+    // Determinar límite según el nivel
+    const maxSelection = this.currentLevel === 1 ? 2 : 3;
+    
     // Si ya está seleccionado, lo quito
     if (this.selectedGenres.includes(genre.id)) {
       this.selectedGenres = this.selectedGenres.filter(id => id !== genre.id);
     } else {
       // Si no está seleccionado y hay espacio, lo agrego
-      if (this.selectedGenres.length < 3) {
+      if (this.selectedGenres.length < maxSelection) {
         this.selectedGenres.push(genre.id);
       }
     }
@@ -353,9 +384,13 @@ class MusicAlchemyLab {
   }
 
   attemptFusion() {
-    // Verificar que hay al menos 2 géneros
-    if (this.selectedGenres.length < 2) {
-      this.showMessage("Necesitas al menos 2 géneros para fusionar");
+    // Determinar cuántos géneros se necesitan según el nivel
+    const requiredGenres = this.currentLevel === 1 ? 2 : 3;
+    
+    // Verificar que tiene la cantidad correcta
+    if (this.selectedGenres.length !== requiredGenres) {
+      const levelText = this.currentLevel === 1 ? "2" : "3";
+      this.showMessage(`En nivel ${this.currentLevel} necesitas exactamente ${levelText} géneros para fusionar`);
       return;
     }
     
@@ -403,24 +438,32 @@ class MusicAlchemyLab {
     const message = `${levelText}¡Descubriste ${genre.emoji} ${genre.name}!`;
     this.showMessage(message);
     
-    // Verificar si se completaron todos los géneros de nivel 1
+    // Verificar si se completó el nivel 1
     this.checkLevel1Complete();
+    
+    // Verificar si se completó todo el juego
+    this.checkGameComplete();
   }
 
   checkLevel1Complete() {
+    if (this.currentLevel !== 1) return; // Solo verificar en nivel 1
+    
     // Contar géneros de nivel 1 descubiertos
     const level1Genres = this.genres.filter(g => g.level === 1);
     const level1Discovered = level1Genres.filter(g => g.discovered);
     
-    // Si se descubrieron los 10 géneros de nivel 1 y no se mostró el mensaje
-    if (level1Discovered.length === 10 && !this.showedLevel2Message) {
+    // Si se descubrieron todos los géneros de nivel 1 y no se mostró el mensaje
+    if (level1Discovered.length === level1Genres.length && !this.showedLevel2Message) {
       this.showedLevel2Message = true;
+      this.currentLevel = 2; // Subir al nivel 2
+      
       // Dar 5 intentos extra para el nivel 2
       this.maxAttempts += 5;
+      
       setTimeout(() => {
-        this.showLongMessage("🎯 ¡Completaste el Nivel 1! Ahora las combinaciones son de a 3 géneros. ¡+5 intentos extra!");
+        this.showLevel2Message();
         this.updateDisplay(); // Actualizar la pantalla para mostrar los nuevos intentos
-      }, 3500);
+      }, 2000);
     }
   }
 
@@ -436,29 +479,82 @@ class MusicAlchemyLab {
     setTimeout(() => modal.remove(), 3000);
   }
 
-  showLongMessage(message) {
+  showLevel2Message() {
+    if (this.isLevel2MessageVisible) return; // Evitar mostrar múltiples veces
+    
+    this.isLevel2MessageVisible = true;
     const modal = document.createElement('div');
-    modal.className = 'game-message';
+    modal.className = 'level-up-message';
     modal.innerHTML = `
-      <div class="message-card">
-        <p id="message-text">${message}</p>
-        <small style="color: #666; font-size: 12px; margin-top: 10px; display: block;">Haz click para cerrar</small>
+      <div class="level-up-card">
+        <h2>👏 ¡FELICITACIONES!</h2>
+        <h3>Completaste el Nivel 1</h3>
+        <div class="level-info">
+          <p>Descubriste todos los géneros básicos</p>
+          <p>🧪Ahora fusiona de a <strong>3 géneros</strong></p>
+          <p>⚡ +5 intentos extra otorgados</p>
+          <p> ¡Bienvenidx al Nivel 2!</p>
+        </div>
+        <button class="btn btn-primary btn-lg" onclick="lab.closeLevel2Message()">
+          ¡Continuar al Nivel 2!
+        </button>
       </div>
     `;
     
-    // Hacer que se pueda cerrar con click
-    modal.addEventListener('click', () => {
+    document.body.appendChild(modal);
+  }
+
+  closeLevel2Message() {
+    const modal = document.querySelector('.level-up-message');
+    if (modal) {
       modal.remove();
-    });
+      this.isLevel2MessageVisible = false;
+    }
+  }
+
+  checkGameComplete() {
+    // Verificar si se completaron TODOS los géneros
+    const allDiscoverableGenres = this.genres.filter(g => !g.isBase);
+    const allDiscovered = allDiscoverableGenres.filter(g => g.discovered);
+    
+    if (allDiscovered.length === allDiscoverableGenres.length) {
+      setTimeout(() => {
+        this.showVictoryMessage();
+      }, 2000);
+    }
+  }
+
+  showVictoryMessage() {
+    const modal = document.createElement('div');
+    modal.className = 'victory-message';
+    modal.innerHTML = `
+      <div class="victory-card">
+        <h1>🎊¡GANASTE!🎉</h1>
+        <h2>Felicitaciones, 🪄te convertiste en maestrx alquimista musical🫵🏼</h2>
+        <div class="victory-info">
+          <p>👏 Descubriste TODOS los géneros musicales</p>
+          <p>🧪 Completaste el Laboratorio Musical</p>
+          <p>🤝Aprendiste jugando</p>
+        </div>
+        <div class="victory-actions">
+          <button class="btn btn-success btn-lg me-3" onclick="lab.closeVictoryMessage()">
+             Cerrar
+          </button>
+          <button class="btn btn-outline-light btn-lg" onclick="lab.resetGame(); lab.closeVictoryMessage()">
+            🔄 Jugar de nuevo
+          </button>
+        </div>
+      </div>
+    `;
     
     document.body.appendChild(modal);
-    
-    // Auto-cerrar después de 8 segundos (más tiempo para leer)
-    setTimeout(() => {
-      if (modal.parentNode) {
-        modal.remove();
-      }
-    }, 8000);
+  }
+
+  closeVictoryMessage() {
+    const modal = document.querySelector('.victory-message');
+    if (modal) {
+      modal.remove();
+    }
   }
 
   clearSelection() {
